@@ -1,0 +1,13 @@
+{
+  "name": "nest-mapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "IlhamTahir",
+  "license": "MIT",
+  "packageManager": "pnpm@10.7.1"
+}
