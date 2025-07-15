@@ -6,9 +6,32 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "pnpm build",
+    "postpublish": "echo \"✅ @ilhamtahir/nest-mapper published successfully!\""
   },
-  "keywords": ["nestjs", "mapper", "dto", "entity", "typescript", "mapstruct"],
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilhamtahir/nest-mapper.git",
+    "directory": "packages/nestjs"
+  },
+  "bugs": {
+    "url": "https://github.com/ilhamtahir/nest-mapper/issues"
+  },
+  "homepage": "https://github.com/ilhamtahir/nest-mapper#readme",
+  "keywords": [
+    "nestjs",
+    "mapper",
+    "dto",
+    "entity",
+    "typescript",
+    "mapstruct"
+  ],
   "dependencies": {
     "@nestjs/common": "^10.0.0",
     "@ilhamtahir/ts-mapper": "workspace:*"

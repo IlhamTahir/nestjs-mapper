@@ -1,4 +1,4 @@
 export interface MappingOptions {
-    source: string;
-    target: string;
+  source: string;
+  target: string;
 }

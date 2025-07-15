@@ -22,7 +22,7 @@ export class UserEntity {
     this.isActive = true;
     this.profile = {
       bio: '',
-      avatar: ''
+      avatar: '',
     };
     this.createdAt = new Date();
     this.updatedAt = new Date();

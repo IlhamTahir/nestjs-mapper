@@ -1,21 +1,20 @@
-import {ClassProvider, DynamicModule, Module, Provider} from '@nestjs/common';
-import { metadataStorage } from '@ilhamtahir/ts-mapper';
-import {Injectable} from "@nestjs/common/interfaces";
+import { DynamicModule, Module, Provider } from '@nestjs/common';
+import { metadataStorage, createMapperProxy } from '@ilhamtahir/ts-mapper';
 
 @Module({})
 export class MapperModule {
-    static forRoot(): DynamicModule {
-        const mapperClasses = metadataStorage.getAllMappers() as Array<new (...args: any[]) => any>;
+  static forRoot(): DynamicModule {
+    const mapperClasses = metadataStorage.getAllMappers() as Array<new (...args: any[]) => any>;
 
-        const providers: Provider[] = mapperClasses.map((item) => ({
-            provide: item,
-            useClass: item,
-        }));
+    const providers: Provider[] = mapperClasses.map(MapperClass => ({
+      provide: MapperClass,
+      useFactory: () => createMapperProxy(MapperClass),
+    }));
 
-        return {
-            module: MapperModule,
-            providers,
-            exports: providers,
-        };
-    }
+    return {
+      module: MapperModule,
+      providers,
+      exports: providers,
+    };
+  }
 }

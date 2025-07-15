@@ -12,10 +12,60 @@
     "start:example": "pnpm --filter nest-app-example start",
     "install:all": "pnpm install",
     "clean": "pnpm -r exec rm -rf dist node_modules",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts,.js --fix",
+    "lint:check": "eslint . --ext .ts,.js",
+    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,js,json,md}\"",
+    "type-check": "pnpm -r exec tsc --noEmit",
+    "pre-release": "run-s lint:check format:check type-check build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "version:patch": "standard-version --release-as patch",
+    "version:minor": "standard-version --release-as minor",
+    "version:major": "standard-version --release-as major",
+    "version": "standard-version",
+    "release:core": "pnpm --filter @ilhamtahir/ts-mapper publish --access public",
+    "release:nestjs": "pnpm --filter @ilhamtahir/nest-mapper publish --access public",
+    "release": "run-s pre-release version && run-p release:core release:nestjs",
+    "release:dry": "run-s pre-release && echo 'Dry run completed successfully'",
+    "test-release": "./scripts/test-release.sh",
+    "prepare": "husky install"
   },
-  "keywords": ["typescript", "nestjs", "mapper", "dto", "entity", "mapstruct", "object-mapping"],
+  "keywords": [
+    "typescript",
+    "nestjs",
+    "mapper",
+    "dto",
+    "entity",
+    "mapstruct",
+    "object-mapping"
+  ],
   "author": "IlhamTahir",
   "license": "MIT",
-  "packageManager": "pnpm@10.7.1"
+  "packageManager": "pnpm@10.7.1",
+  "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "conventional-changelog-cli": "^4.1.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.0",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
 }

@@ -1,7 +1,7 @@
 import { metadataStorage } from '../metadata/metadata.storage';
 
-export function Mapper(): ClassDecorator {
-    return (target: Function) => {
-        metadataStorage.registerMapper(target);
-    };
+export function Mapper() {
+  return (target: any) => {
+    metadataStorage.registerMapper(target);
+  };
 }

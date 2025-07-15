@@ -4,8 +4,33 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "pnpm build",
+    "postpublish": "echo \"✅ @ilhamtahir/ts-mapper published successfully!\""
   },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilhamtahir/nest-mapper.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/ilhamtahir/nest-mapper/issues"
+  },
+  "homepage": "https://github.com/ilhamtahir/nest-mapper#readme",
+  "keywords": [
+    "typescript",
+    "mapper",
+    "dto",
+    "entity",
+    "object-mapping",
+    "mapstruct",
+    "transform"
+  ],
   "license": "MIT",
   "author": "IlhamTahir"
 }

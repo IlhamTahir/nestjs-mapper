@@ -1,37 +1,41 @@
 # NestJS Mapper
 
-一个 TypeScript + NestJS 生态的轻量级 MapStruct 替代品，提供标准化的 DTO ↔ Entity 映射方案。
+English | [简体中文](./README-ZH.md)
 
-## 🚀 特性
+A lightweight MapStruct alternative for TypeScript + NestJS ecosystem, providing standardized DTO ↔ Entity mapping solutions.
 
-- **编译期安全**：完全基于 TypeScript，提供类型安全保障
-- **最小侵入**：使用装饰器驱动，对现有代码影响最小
-- **装饰器驱动**：`@Mapper()` 和 `@Mapping()` 装饰器，简洁易用
-- **自动字段映射**：字段名相同时自动赋值，支持类型检查
-- **依赖注入支持**：完美集成 NestJS 依赖注入系统
-- **嵌套路径支持**：支持 `profile.bio` 等嵌套字段映射
+## 🚀 Features
 
-## 📦 模块结构
+- **Compile-time Safety**: Fully TypeScript-based with type safety guarantees
+- **Minimal Intrusion**: Decorator-driven approach with minimal impact on existing code
+- **Decorator-driven**: Simple `@Mapper()` and `@Mapping()` decorators
+- **Automatic Field Mapping**: Auto-assignment for same-named fields with type checking
+- **Dependency Injection**: Perfect integration with NestJS DI system
+- **Nested Path Support**: Support for nested field mapping like `profile.bio`
+- **🆕 Abstract Class Support**: Support for abstract classes and empty method body auto-mapping
+- **🆕 Proxy Auto Implementation**: Empty method bodies automatically call transform, preserving custom method logic
 
-| 模块 | 包名 | 说明 |
-|------|------|------|
-| 映射核心逻辑 | `@ilhamtahir/ts-mapper` | 装饰器注册、映射执行、字段提取等 |
-| NestJS 框架封装 | `@ilhamtahir/nest-mapper` | 自动依赖注入、模块注册、Mapper 装饰器增强 |
-| 示例项目 | `examples/nest-app` | 使用真实 DTO、Entity、Mapper 展示用法 |
+## 📦 Package Structure
 
-## 🛠️ 安装
+| Module             | Package Name              | Description                                                               |
+| ------------------ | ------------------------- | ------------------------------------------------------------------------- |
+| Core Mapping Logic | `@ilhamtahir/ts-mapper`   | Decorator registration, mapping execution, field extraction               |
+| NestJS Integration | `@ilhamtahir/nest-mapper` | Auto dependency injection, module registration, enhanced Mapper decorator |
+| Example Project    | `examples/nest-app`       | Real-world usage examples with DTO, Entity, and Mapper                    |
+
+## 🛠️ Installation
 
 ```bash
-# 安装核心包
+# Install core package
 npm install @ilhamtahir/ts-mapper
 
-# 安装 NestJS 集成包
+# Install NestJS integration package
 npm install @ilhamtahir/nest-mapper
 ```
 
-## 📖 快速开始
+## 📖 Quick Start
 
-### 1. 定义实体和 DTO
+### 1. Define Entity and DTO
 
 ```typescript
 // user.entity.ts
@@ -57,7 +61,7 @@ export class UserDto {
 }
 ```
 
-### 2. 创建 Mapper
+### 2. Create Mapper
 
 ```typescript
 // user.mapper.ts
@@ -74,7 +78,7 @@ export class UserMapper {
 }
 ```
 
-### 3. 配置模块
+### 3. Configure Module
 
 ```typescript
 // app.module.ts
@@ -83,14 +87,14 @@ import { MapperModule } from '@ilhamtahir/nest-mapper';
 
 @Module({
   imports: [
-    MapperModule.forRoot(), // 自动注册所有 @Mapper() 类
+    MapperModule.forRoot(), // Auto-register all @Mapper() classes
   ],
   // ...
 })
 export class AppModule {}
 ```
 
-### 4. 使用 Mapper
+### 4. Use Mapper
 
 ```typescript
 // app.service.ts
@@ -102,42 +106,193 @@ export class AppService {
   constructor(private readonly userMapper: UserMapper) {}
 
   getUser(): UserDto {
-    const entity = { /* ... */ };
+    const entity = {
+      /* ... */
+    };
     return this.userMapper.toDto(entity);
   }
 }
 ```
 
-## 🏃‍♂️ 运行示例
+## 🏃‍♂️ Running Examples
 
 ```bash
-# 安装依赖
+# Install dependencies
 pnpm install
 
-# 构建所有包
+# Build all packages
 pnpm build
 
-# 运行示例应用
+# Run example application
 pnpm dev:example
 ```
 
-访问 http://localhost:3000/api 查看 Swagger 文档。
+Visit http://localhost:3000/api to view Swagger documentation.
 
-## 📚 API 文档
+## 🆕 New Feature: Abstract Class + Proxy Auto-mapping
 
-### 装饰器
+### Using Abstract Class (Recommended)
 
-- `@Mapper()`：标记类为映射器，自动注册到 NestJS 容器
-- `@Mapping({ source, target })`：显式字段映射定义
+```typescript
+// user-abstract.mapper.ts
+import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
 
-### 工具函数
+@Mapper()
+export abstract class UserAbstractMapper {
+  /**
+   * Empty method body: system will automatically call transform
+   */
+  @Mapping({ source: 'fullName', target: 'name' })
+  @Mapping({ source: 'profile.bio', target: 'bio' })
+  @Mapping({ source: 'profile.avatar', target: 'avatar' })
+  toDto(entity: UserEntity): UserDto {
+    // Empty method body, system will automatically call transform
+    return {} as UserDto;
+  }
 
-- `transform(mapper, method, input, OutputType)`：执行映射转换
+  /**
+   * Batch conversion
+   */
+  toDtoList(entities: UserEntity[]): UserDto[] {
+    return entities.map(entity => this.toDto(entity));
+  }
+}
+```
 
-## 🤝 贡献
+### Mixed Mode: Empty Method Body + Custom Methods
 
-欢迎提交 Issue 和 Pull Request！
+```typescript
+// user-mixed.mapper.ts
+@Mapper()
+export class UserMixedMapper {
+  /**
+   * Empty method body: automatically executes transform
+   */
+  @Mapping({ source: 'fullName', target: 'name' })
+  toDto(entity: UserEntity): UserDto {
+    return {} as UserDto; // Auto-mapping
+  }
 
-## 📄 许可证
+  /**
+   * Custom method: preserves original logic
+   */
+  toDtoWithCustomLogic(entity: UserEntity): UserDto {
+    const dto = new UserDto();
+    dto.name = `[VIP] ${entity.fullName}`; // Custom logic
+    dto.email = entity.email.toLowerCase();
+    // ... other custom logic
+    return dto;
+  }
+}
+```
+
+### How It Works
+
+1. **Empty Method Body Detection**: System automatically detects methods containing only `return {} as Type;`
+2. **Auto Proxy**: `MapperModule.forRoot()` automatically creates proxies for all Mappers
+3. **Smart Routing**:
+   - Empty method body → Automatically calls `transform()`
+   - Non-empty method body → Preserves original logic
+4. **Full Compatibility**: Existing code requires no modifications and continues to work normally
+
+## 📚 API Documentation
+
+### Decorators
+
+- `@Mapper()`: Mark class as mapper, automatically register to NestJS container
+- `@Mapping({ source, target })`: Explicit field mapping definition
+
+### Utility Functions
+
+- `transform(mapper, method, input, OutputType)`: Execute mapping transformation
+- `createMapperProxy(MapperClass)`: Create proxy object supporting auto-mapping
+
+## 🚀 Development and Release
+
+### Development Setup
+
+```bash
+# Clone project
+git clone https://github.com/ilhamtahir/nest-mapper.git
+cd nest-mapper
+
+# Install dependencies
+pnpm install
+
+# Build project
+pnpm build
+
+# Run examples
+pnpm dev:example
+```
+
+### Code Quality
+
+The project is configured with comprehensive code quality tools:
+
+```bash
+# Code linting
+pnpm run lint
+
+# Code formatting
+pnpm run format
+
+# Type checking
+pnpm run type-check
+
+# Pre-release checks (includes all above checks + build)
+pnpm run pre-release
+```
+
+### Release Process
+
+```bash
+# Test release process (without actual publishing)
+pnpm run test-release patch
+
+# Actual release
+./scripts/release.sh patch   # Patch version
+./scripts/release.sh minor   # Minor version
+./scripts/release.sh major   # Major version
+```
+
+For detailed release instructions, please refer to [RELEASE.md](./RELEASE.md).
+
+### Commit Convention
+
+The project uses [Conventional Commits](https://www.conventionalcommits.org/) specification:
+
+```bash
+feat: add new feature
+fix: fix bug
+docs: update documentation
+style: code formatting
+refactor: refactor code
+test: add tests
+chore: build tools or dependency updates
+```
+
+## 🤝 Contributing
+
+Issues and Pull Requests are welcome!
+
+### Contributing Process
+
+1. Fork the project
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Create a Pull Request
+
+## 📞 Support
+
+If you encounter any issues:
+
+1. Check the [FAQ](https://github.com/ilhamtahir/nest-mapper/wiki/FAQ)
+2. Search [existing Issues](https://github.com/ilhamtahir/nest-mapper/issues)
+3. Create a [new Issue](https://github.com/ilhamtahir/nest-mapper/issues/new/choose)
+4. Visit [Discussions](https://github.com/ilhamtahir/nest-mapper/discussions)
+
+## 📄 License
 
 MIT License

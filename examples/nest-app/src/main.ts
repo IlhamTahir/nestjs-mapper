@@ -12,7 +12,7 @@ async function bootstrap() {
     .setVersion('0.1.0')
     .addTag('用户管理', '用户相关的 API 接口')
     .build();
-  
+
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
 
@@ -21,7 +21,7 @@ async function bootstrap() {
 
   const port = process.env.PORT || 3000;
   await app.listen(port);
-  
+
   console.log(`🚀 应用已启动！`);
   console.log(`📖 API 文档: http://localhost:${port}/api`);
   console.log(`🌐 应用地址: http://localhost:${port}`);
