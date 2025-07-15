@@ -17,4 +17,17 @@ export class MapperModule {
       exports: providers,
     };
   }
+
+  static forFeature(mappers: Array<new (...args: any[]) => any>): DynamicModule {
+    const providers: Provider[] = mappers.map(MapperClass => ({
+      provide: MapperClass,
+      useFactory: () => createMapperProxy(MapperClass),
+    }));
+
+    return {
+      module: MapperModule,
+      providers,
+      exports: providers,
+    };
+  }
 }
