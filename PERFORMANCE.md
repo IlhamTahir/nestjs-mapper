@@ -310,4 +310,4 @@ export class PerformanceService {
 
 ---
 
-**Need help with performance optimization?** [Open a discussion](https://github.com/ilhamtahir/nest-mapper/discussions) and share your use case!
+**Need help with performance optimization?** [Open a discussion](https://github.com/ilhamtahir/nestjs-mapper/discussions) and share your use case!

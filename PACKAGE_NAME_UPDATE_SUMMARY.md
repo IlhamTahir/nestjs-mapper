@@ -1,6 +1,6 @@
 # 包名更新总结
 
-本文档记录了将包名从 `@ilhamtahir/nest-mapper` 更新为 `@ilhamtahir/nestjs-mapper` 的所有变更。
+本文档记录了将包名从 `@ilhamtahir/nestjs-mapper` 更新为 `@ilhamtahir/nestjs-mapper` 的所有变更。
 
 ## ✅ 已更新的文件
 
@@ -18,8 +18,8 @@
 - ✅ `docs/en/contributing.md` - 包名和示例目录名已更新
 - ✅ `docs/zh/contributing.md` - 包名已更新
 - ✅ `docs/en/guide/nest/getting-started.md` - API 文档链接已更新
-- ✅ `docs/en/api/nest-mapper.md` - 包名和导入语句已更新
-- ✅ `docs/zh/api/nest-mapper.md` - 包名和导入语句已更新
+- ✅ `docs/en/api/nestjs-mapper.md` - 包名和导入语句已更新
+- ✅ `docs/zh/api/nestjs-mapper.md` - 包名和导入语句已更新
 
 ### 3. VitePress 配置
 
@@ -45,7 +45,7 @@
 ### 之前
 
 ```bash
-npm install @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+npm install @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 ### 现在
@@ -59,7 +59,7 @@ npm install @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 #### 之前
 
 ```typescript
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 ```
 
 #### 现在
@@ -77,7 +77,7 @@ import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 ### GitHub Pages
 
-- 之前：`https://ilhamtahir.github.io/nest-mapper/`
+- 之前：`https://ilhamtahir.github.io/nestjs-mapper/`
 - 现在：`https://ilhamtahir.github.io/nestjs-mapper/`
 
 ### NPM 包
@@ -96,7 +96,7 @@ import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 2. **更新 NPM 包**：
    - 新包名 `@ilhamtahir/nestjs-mapper` 将发布到 NPM
-   - 考虑是否需要废弃旧包名 `@ilhamtahir/nest-mapper`
+   - 考虑是否需要废弃旧包名 `@ilhamtahir/nestjs-mapper`
 
 3. **通知用户**：
    - 在 CHANGELOG.md 中记录包名变更

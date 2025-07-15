@@ -45,14 +45,14 @@ docs/
 │   │   ├── transform.md
 │   │   ├── mapping.md
 │   │   └── custom-strategy.md
-│   └── nest/               # nest-mapper NestJS 集成指南
+│   └── nest/               # nestjs-mapper NestJS 集成指南
 │       ├── getting-started.md
 │       ├── injection.md
 │       ├── abstract-class.md
 │       └── circular-deps.md
 ├── api/
 │   ├── ts-mapper.md        # ts-mapper API 文档
-│   └── nest-mapper.md      # nest-mapper API 文档
+│   └── nestjs-mapper.md      # nestjs-mapper API 文档
 ├── index.md                # 首页
 ├── contributing.md         # 贡献指南
 ├── changelog.md            # 更新日志

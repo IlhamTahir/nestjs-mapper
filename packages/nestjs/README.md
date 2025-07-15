@@ -1,9 +1,9 @@
-# @ilhamtahir/nest-mapper
+# @ilhamtahir/nestjs-mapper
 
-[![npm version](https://img.shields.io/npm/v/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![npm downloads](https://img.shields.io/npm/dm/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![npm license](https://img.shields.io/npm/l/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nest-mapper/pulls)
+[![npm version](https://img.shields.io/npm/v/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![npm downloads](https://img.shields.io/npm/dm/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![npm license](https://img.shields.io/npm/l/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nestjs-mapper/pulls)
 
 NestJS integration for @ilhamtahir/ts-mapper - A MapStruct-like object mapping library for TypeScript and NestJS.
 
@@ -49,7 +49,7 @@ export class AppModule {}
 
 ```typescript
 // user.mapper.ts
-import { Mapper, Mapping, transform } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping, transform } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export class UserMapper {
@@ -91,7 +91,7 @@ export class UserService {
 
 ```typescript
 // user-abstract.mapper.ts
-import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export abstract class UserAbstractMapper {
@@ -127,7 +127,7 @@ export abstract class UserAbstractMapper {
 // advanced-user.mapper.ts
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { Mapper, Mapping, transform } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping, transform } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 @Injectable()
@@ -173,7 +173,7 @@ export class AppModule {}
 ```typescript
 // user.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './mappers/user.mapper';
 import { UserService } from './user.service';
 
@@ -229,12 +229,12 @@ export class UserService {
 
 ## 📋 Resources
 
-- [Full Documentation](https://github.com/ilhamtahir/nest-mapper)
+- [Full Documentation](https://github.com/ilhamtahir/nestjs-mapper)
 - [Core Package (@ilhamtahir/ts-mapper)](https://www.npmjs.com/package/@ilhamtahir/ts-mapper)
-- [FAQ](https://github.com/ilhamtahir/nest-mapper/blob/main/FAQ.md)
-- [Performance Guide](https://github.com/ilhamtahir/nest-mapper/blob/main/PERFORMANCE.md)
-- [Contributing Guide](https://github.com/ilhamtahir/nest-mapper/blob/main/CONTRIBUTING.md)
-- [Changelog](https://github.com/ilhamtahir/nest-mapper/blob/main/CHANGELOG.md)
+- [FAQ](https://github.com/ilhamtahir/nestjs-mapper/blob/main/FAQ.md)
+- [Performance Guide](https://github.com/ilhamtahir/nestjs-mapper/blob/main/PERFORMANCE.md)
+- [Contributing Guide](https://github.com/ilhamtahir/nestjs-mapper/blob/main/CONTRIBUTING.md)
+- [Changelog](https://github.com/ilhamtahir/nestjs-mapper/blob/main/CHANGELOG.md)
 
 ## 🤝 Related Packages
 

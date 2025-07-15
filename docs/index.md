@@ -14,7 +14,7 @@ hero:
       link: /en/guide/core/getting-started
     - theme: alt
       text: NestJS Integration
-      link: /en/guide/nest/getting-started
+      link: /en/guide/nestjs/getting-started
     - theme: alt
       text: View on GitHub
       link: https://github.com/ilhamtahir/nestjs-mapper

@@ -17,7 +17,7 @@ hero:
       link: /zh/guide/nestjs/getting-started
     - theme: alt
       text: 查看 GitHub
-      link: https://github.com/ilhamtahir/nest-mapper
+      link: https://github.com/ilhamtahir/nestjs-mapper
 
 features:
   - icon: 🛡️
@@ -57,10 +57,10 @@ class UserMapper {
 }
 ```
 
-### NestJS 集成 (@ilhamtahir/nest-mapper)
+### NestJS 集成 (@ilhamtahir/nestjs-mapper)
 
 ```typescript
-import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export abstract class UserMapper {
@@ -81,7 +81,7 @@ export abstract class UserMapper {
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -100,7 +100,7 @@ export class AppModule {}
 npm install @ilhamtahir/ts-mapper
 
 # NestJS 集成包
-npm install @ilhamtahir/nest-mapper
+npm install @ilhamtahir/nestjs-mapper
 ```
 
 ```bash [yarn]
@@ -108,7 +108,7 @@ npm install @ilhamtahir/nest-mapper
 yarn add @ilhamtahir/ts-mapper
 
 # NestJS 集成包
-yarn add @ilhamtahir/nest-mapper
+yarn add @ilhamtahir/nestjs-mapper
 ```
 
 ```bash [pnpm]
@@ -116,7 +116,7 @@ yarn add @ilhamtahir/nest-mapper
 pnpm add @ilhamtahir/ts-mapper
 
 # NestJS 集成包
-pnpm add @ilhamtahir/nest-mapper
+pnpm add @ilhamtahir/nestjs-mapper
 ```
 
 :::
@@ -132,7 +132,7 @@ pnpm add @ilhamtahir/nest-mapper
 
 ## 社区与支持
 
-- [GitHub Issues](https://github.com/ilhamtahir/nest-mapper/issues) - 报告问题和功能请求
-- [GitHub Discussions](https://github.com/ilhamtahir/nest-mapper/discussions) - 社区讨论
+- [GitHub Issues](https://github.com/ilhamtahir/nestjs-mapper/issues) - 报告问题和功能请求
+- [GitHub Discussions](https://github.com/ilhamtahir/nestjs-mapper/discussions) - 社区讨论
 - [NPM Package](https://www.npmjs.com/package/@ilhamtahir/ts-mapper) - 查看包信息
-- [示例项目](https://github.com/ilhamtahir/nest-mapper/tree/main/examples) - 完整使用示例
+- [示例项目](https://github.com/ilhamtahir/nestjs-mapper/tree/main/examples) - 完整使用示例

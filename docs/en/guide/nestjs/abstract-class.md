@@ -30,7 +30,7 @@ export abstract class UserMapper {
 
 ```typescript
 // user.mapper.ts
-import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping } from '@ilhamtahir/nestjs-mapper';
 import { UserEntity } from '../entities/user.entity';
 import { UserDto } from '../dto/user.dto';
 
@@ -265,7 +265,7 @@ export abstract class TypeSafeMapper {
 ```typescript
 // user.mapper.spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './user.mapper';
 
 describe('UserMapper', () => {
@@ -324,5 +324,5 @@ describe('UserMapper', () => {
 ## Next Steps
 
 - Learn how to handle [nested & circular dependencies](./circular-deps)
-- Check [API documentation](../../api/nest-mapper) for complete interfaces
+- Check [API documentation](../../api/nestjs-mapper) for complete interfaces
 - Explore [core functionality](../core/getting-started) advanced usage

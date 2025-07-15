@@ -61,10 +61,10 @@ export default defineConfig({
         {
           text: 'nestjs-mapper Integration',
           items: [
-            { text: 'NestJS Getting Started', link: '/en/guide/nest/getting-started' },
-            { text: 'Mapper Injection', link: '/en/guide/nest/injection' },
-            { text: 'Abstract Class Support', link: '/en/guide/nest/abstract-class' },
-            { text: 'Nested & Circular Dependencies', link: '/en/guide/nest/circular-deps' }
+            { text: 'NestJS Getting Started', link: '/en/guide/nestjs/getting-started' },
+            { text: 'Mapper Injection', link: '/en/guide/nestjs/injection' },
+            { text: 'Abstract Class Support', link: '/en/guide/nestjs/abstract-class' },
+            { text: 'Nested & Circular Dependencies', link: '/en/guide/nestjs/circular-deps' }
           ]
         }
       ],
@@ -92,10 +92,10 @@ export default defineConfig({
         {
           text: 'nestjs-mapper 集成',
           items: [
-            { text: 'NestJS 快速开始', link: '/zh/guide/nest/getting-started' },
-            { text: 'Mapper 依赖注入', link: '/zh/guide/nest/injection' },
-            { text: '抽象类支持', link: '/zh/guide/nest/abstract-class' },
-            { text: '嵌套与循环依赖', link: '/zh/guide/nest/circular-deps' }
+            { text: 'NestJS 快速开始', link: '/zh/guide/nestjs/getting-started' },
+            { text: 'Mapper 依赖注入', link: '/zh/guide/nestjs/injection' },
+            { text: '抽象类支持', link: '/zh/guide/nestjs/abstract-class' },
+            { text: '嵌套与循环依赖', link: '/zh/guide/nestjs/circular-deps' }
           ]
         }
       ],

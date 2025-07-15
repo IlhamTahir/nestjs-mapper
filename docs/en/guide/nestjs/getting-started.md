@@ -165,7 +165,7 @@ const mappers = {
   order: new OrderMapper(),
 };
 
-// ✅ nest-mapper: Automatic registration and management
+// ✅ nestjs-mapper: Automatic registration and management
 @Module({
   imports: [MapperModule.forRoot()], // Auto-discover and register all @Mapper()
 })
@@ -238,7 +238,7 @@ export class UserMapper {
 
 // user.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
 
@@ -297,7 +297,7 @@ export class UserMapper {
 ```typescript
 // user.mapper.spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './user.mapper';
 
 describe('UserMapper', () => {

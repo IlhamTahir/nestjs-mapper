@@ -103,7 +103,7 @@ pnpm docs:preview
 
 ### 🐛 Bug Reports
 
-Found a bug? Please report it through [GitHub Issues](https://github.com/ilhamtahir/nest-mapper/issues):
+Found a bug? Please report it through [GitHub Issues](https://github.com/ilhamtahir/nestjs-mapper/issues):
 
 1. Use a clear title to describe the issue
 2. Provide detailed reproduction steps
@@ -172,8 +172,8 @@ Documentation improvements include:
 
    ```bash
    # Fork the project on GitHub
-   git clone https://github.com/YOUR_USERNAME/nest-mapper.git
-   cd nest-mapper
+   git clone https://github.com/YOUR_USERNAME/nestjs-mapper.git
+   cd nestjs-mapper
    ```
 
 2. **Create Feature Branch**
@@ -382,8 +382,8 @@ git push origin main --tags
 
 If you encounter issues during the contribution process:
 
-1. Check existing [Issues](https://github.com/ilhamtahir/nest-mapper/issues)
-2. Search [Discussions](https://github.com/ilhamtahir/nest-mapper/discussions)
+1. Check existing [Issues](https://github.com/ilhamtahir/nestjs-mapper/issues)
+2. Search [Discussions](https://github.com/ilhamtahir/nestjs-mapper/discussions)
 3. Create a new Issue or Discussion
 4. @mention maintainers in PRs
 

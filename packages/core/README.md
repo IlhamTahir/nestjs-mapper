@@ -169,15 +169,15 @@ npm install typescript@^4.7.0 --save-dev
 
 ## 📋 Resources
 
-- [Full Documentation](https://github.com/ilhamtahir/nest-mapper)
-- [FAQ](https://github.com/ilhamtahir/nest-mapper/blob/main/FAQ.md)
-- [Performance Guide](https://github.com/ilhamtahir/nest-mapper/blob/main/PERFORMANCE.md)
-- [Contributing Guide](https://github.com/ilhamtahir/nest-mapper/blob/main/CONTRIBUTING.md)
-- [Changelog](https://github.com/ilhamtahir/nest-mapper/blob/main/CHANGELOG.md)
+- [Full Documentation](https://github.com/ilhamtahir/nestjs-mapper)
+- [FAQ](https://github.com/ilhamtahir/nestjs-mapper/blob/main/FAQ.md)
+- [Performance Guide](https://github.com/ilhamtahir/nestjs-mapper/blob/main/PERFORMANCE.md)
+- [Contributing Guide](https://github.com/ilhamtahir/nestjs-mapper/blob/main/CONTRIBUTING.md)
+- [Changelog](https://github.com/ilhamtahir/nestjs-mapper/blob/main/CHANGELOG.md)
 
 ## 🤝 Related Packages
 
-- [@ilhamtahir/nest-mapper](https://www.npmjs.com/package/@ilhamtahir/nest-mapper): NestJS integration for this package
+- [@ilhamtahir/nestjs-mapper](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper): NestJS integration for this package
 
 ## 📄 License
 

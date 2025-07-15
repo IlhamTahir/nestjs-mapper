@@ -46,20 +46,20 @@ docs/
 │   │   │   ├── transform.md
 │   │   │   ├── mapping.md
 │   │   │   └── custom-strategy.md
-│   │   └── nest/           # nest-mapper NestJS integration guide
+│   │   └── nest/           # nestjs-mapper NestJS integration guide
 │   │       ├── getting-started.md
 │   │       ├── injection.md
 │   │       ├── abstract-class.md
 │   │       └── circular-deps.md
 │   ├── api/
 │   │   ├── ts-mapper.md    # ts-mapper API documentation
-│   │   └── nest-mapper.md  # nest-mapper API documentation
+│   │   └── nestjs-mapper.md  # nestjs-mapper API documentation
 │   ├── contributing.md     # Contributing guide
 │   └── changelog.md        # Changelog
 ├── zh/                     # Chinese documentation
 │   ├── guide/
 │   │   ├── core/           # ts-mapper 核心功能指南
-│   │   └── nest/           # nest-mapper NestJS 集成指南
+│   │   └── nest/           # nestjs-mapper NestJS 集成指南
 │   ├── api/
 │   ├── contributing.md     # 贡献指南
 │   └── changelog.md        # 更新日志

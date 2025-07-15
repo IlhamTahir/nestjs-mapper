@@ -15,7 +15,7 @@
 
 **A:** It depends on your use case:
 
-- **For NestJS projects**: Install both `@ilhamtahir/ts-mapper` and `@ilhamtahir/nest-mapper`
+- **For NestJS projects**: Install both `@ilhamtahir/ts-mapper` and `@ilhamtahir/nestjs-mapper`
 - **For standalone TypeScript projects**: Only `@ilhamtahir/ts-mapper` is needed
 
 ### Q: Can I use this library without NestJS?
@@ -258,16 +258,16 @@ src/
 **A:** Check out:
 
 - [Examples directory](./examples/) in this repository
-- [Documentation site](https://ilhamtahir.github.io/nest-mapper/) (coming soon)
-- [GitHub Wiki](https://github.com/ilhamtahir/nest-mapper/wiki)
+- [Documentation site](https://ilhamtahir.github.io/nestjs-mapper/) (coming soon)
+- [GitHub Wiki](https://github.com/ilhamtahir/nestjs-mapper/wiki)
 
 ### Q: How do I report bugs or request features?
 
 **A:**
 
-- **Bugs**: [Create an issue](https://github.com/ilhamtahir/nest-mapper/issues/new?template=bug_report.md)
-- **Features**: [Create a feature request](https://github.com/ilhamtahir/nest-mapper/issues/new?template=feature_request.md)
-- **Questions**: [Start a discussion](https://github.com/ilhamtahir/nest-mapper/discussions)
+- **Bugs**: [Create an issue](https://github.com/ilhamtahir/nestjs-mapper/issues/new?template=bug_report.md)
+- **Features**: [Create a feature request](https://github.com/ilhamtahir/nestjs-mapper/issues/new?template=feature_request.md)
+- **Questions**: [Start a discussion](https://github.com/ilhamtahir/nestjs-mapper/discussions)
 
 ### Q: Can I contribute to the project?
 
@@ -275,4 +275,4 @@ src/
 
 ---
 
-**Still have questions?** Feel free to [open a discussion](https://github.com/ilhamtahir/nest-mapper/discussions) or [create an issue](https://github.com/ilhamtahir/nest-mapper/issues/new/choose)!
+**Still have questions?** Feel free to [open a discussion](https://github.com/ilhamtahir/nestjs-mapper/discussions) or [create an issue](https://github.com/ilhamtahir/nestjs-mapper/issues/new/choose)!

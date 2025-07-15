@@ -15,8 +15,8 @@ Thank you for your interest in contributing to NestJS Mapper! This document prov
 1. **Fork and Clone**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/nest-mapper.git
-   cd nest-mapper
+   git clone https://github.com/YOUR_USERNAME/nestjs-mapper.git
+   cd nestjs-mapper
    ```
 
 2. **Install Dependencies**

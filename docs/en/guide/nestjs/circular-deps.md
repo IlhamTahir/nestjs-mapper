@@ -368,6 +368,6 @@ describe('Circular Dependency Handling', () => {
 
 ## Next Steps
 
-- Check [API documentation](../../api/nest-mapper) for complete interfaces
+- Check [API documentation](../../api/nestjs-mapper) for complete interfaces
 - Explore [core functionality](../core/getting-started) advanced usage
 - Learn about [dependency injection](./injection) best practices

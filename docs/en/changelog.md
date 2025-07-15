@@ -101,7 +101,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Package Size
 - `@ilhamtahir/ts-mapper`: ~15KB (gzipped)
-- `@ilhamtahir/nest-mapper`: ~5KB (gzipped)
+- `@ilhamtahir/nestjs-mapper`: ~5KB (gzipped)
 
 ### Performance Features
 - **Metadata caching**: Mapping rules cached on first use
@@ -146,13 +146,13 @@ Thanks to all developers who have contributed to this project:
 If you encounter issues or have feature requests, please:
 
 1. Check the [documentation](https://docs.ilham.dev/ts-mapper)
-2. Search existing [Issues](https://github.com/ilhamtahir/nest-mapper/issues)
+2. Search existing [Issues](https://github.com/ilhamtahir/nestjs-mapper/issues)
 3. Create a new Issue or Discussion
 4. Participate in community discussions
 
 ## License
 
-This project is open source under the [MIT License](https://github.com/ilhamtahir/nest-mapper/blob/main/LICENSE).
+This project is open source under the [MIT License](https://github.com/ilhamtahir/nestjs-mapper/blob/main/LICENSE).
 
 ---
 

@@ -67,7 +67,7 @@ static forRoot(): DynamicModule
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -178,7 +178,7 @@ export class OrderMapper {
 
 ## Abstract Class Support
 
-nest-mapper fully supports abstract classes and auto-implementation:
+nestjs-mapper fully supports abstract classes and auto-implementation:
 
 ```typescript
 @Mapper()
@@ -256,7 +256,7 @@ export class RequestScopedMapper {
 
 ```typescript
 import { Test, TestingModule } from '@nestjs/testing';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './user.mapper';
 
 describe('UserMapper', () => {
