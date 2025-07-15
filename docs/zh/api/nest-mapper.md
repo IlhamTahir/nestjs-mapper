@@ -1,10 +1,10 @@
-# nest-mapper API 文档
+# nestjs-mapper API 文档
 
-`@ilhamtahir/nest-mapper` 是基于 `@ilhamtahir/ts-mapper` 的 NestJS 集成包，提供依赖注入和模块化支持。
+`@ilhamtahir/nestjs-mapper` 是基于 `@ilhamtahir/ts-mapper` 的 NestJS 集成包，提供依赖注入和模块化支持。
 
 ## 重新导出
 
-nest-mapper 重新导出了 ts-mapper 的所有核心功能：
+nestjs-mapper 重新导出了 ts-mapper 的所有核心功能：
 
 ```typescript
 // 从 @ilhamtahir/ts-mapper 重新导出
@@ -31,7 +31,7 @@ function Mapper(): ClassDecorator;
 **示例：**
 
 ```typescript
-import { Mapper, Mapping, transform } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping, transform } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export class UserMapper {
@@ -53,8 +53,8 @@ export class UserMapper {
   // 需要手动创建实例
 }
 
-// nest-mapper 版本
-import { Mapper } from '@ilhamtahir/nest-mapper';
+// nestjs-mapper 版本
+import { Mapper } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper() // 注册元数据 + @Injectable()
 export class UserMapper {
@@ -91,7 +91,7 @@ static forRoot(): DynamicModule
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -143,7 +143,7 @@ static forFeature(mappers: Array<new (...args: any[]) => any>): DynamicModule
 ```typescript
 // user.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './user.mapper';
 import { ProfileMapper } from './profile.mapper';
 
@@ -231,7 +231,7 @@ export class OrderMapper {
 
 ## 抽象类支持
 
-nest-mapper 完全支持抽象类和自动实现：
+nestjs-mapper 完全支持抽象类和自动实现：
 
 ```typescript
 @Mapper()
@@ -319,7 +319,7 @@ export class TransientMapper {
 
 ```typescript
 import { Test, TestingModule } from '@nestjs/testing';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './user.mapper';
 
 describe('UserMapper', () => {

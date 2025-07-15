@@ -1,4 +1,4 @@
-# nest-mapper API Documentation
+# nestjs-mapper API Documentation
 
 `@ilhamtahir/nest-mapper` is a NestJS integration package built on top of `@ilhamtahir/ts-mapper`, providing dependency injection and modular support.
 

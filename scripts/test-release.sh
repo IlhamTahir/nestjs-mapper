@@ -101,7 +101,7 @@ done
 # 模拟 npm pack（不实际创建 tarball）
 log_info "📦 Simulating npm pack..."
 log_info "   @ilhamtahir/ts-mapper would be packed from packages/core"
-log_info "   @ilhamtahir/nest-mapper would be packed from packages/nestjs"
+log_info "   @ilhamtahir/nestjs-mapper would be packed from packages/nestjs"
 
 # 检查 package.json 文件
 log_info "📄 Validating package.json files..."

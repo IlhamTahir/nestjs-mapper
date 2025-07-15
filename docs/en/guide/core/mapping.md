@@ -325,5 +325,5 @@ export class UserMapper {
 ## Next Steps
 
 - Learn about [custom transformation strategies](./custom-strategy) for complex mapping logic
-- Explore [NestJS integration](../nest/getting-started) dependency injection features
+- Explore [NestJS integration](../nestjs/getting-started) dependency injection features
 - Check [API documentation](../../api/ts-mapper) for complete interface definitions

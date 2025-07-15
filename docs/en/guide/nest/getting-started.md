@@ -1,6 +1,6 @@
 # NestJS Getting Started
 
-`@ilhamtahir/nest-mapper` is a NestJS integration package built on top of `@ilhamtahir/ts-mapper`, providing dependency injection, automatic registration, and abstract class support for enterprise-grade applications.
+`@ilhamtahir/nestjs-mapper` is a NestJS integration package built on top of `@ilhamtahir/ts-mapper`, providing dependency injection, automatic registration, and abstract class support for enterprise-grade applications.
 
 ## Installation
 
@@ -8,15 +8,15 @@
 
 ```bash [npm]
 # Install both core package and NestJS integration package
-npm install @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+npm install @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 ```bash [yarn]
-yarn add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+yarn add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 ```bash [pnpm]
-pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 :::
@@ -30,7 +30,7 @@ Import `MapperModule` in your application module:
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -47,7 +47,7 @@ Create mapping classes using the `@Mapper()` decorator:
 
 ```typescript
 // user.mapper.ts
-import { Mapper, Mapping, transform } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping, transform } from '@ilhamtahir/nestjs-mapper';
 import { UserEntity } from './user.entity';
 import { UserDto } from './user.dto';
 
@@ -144,7 +144,7 @@ import { UserMapper } from './user.mapper';
 const userMapper = new UserMapper();
 const dto = userMapper.toDto(entity);
 
-// ✅ nest-mapper: Automatic dependency injection
+// ✅ nestjs-mapper: Automatic dependency injection
 @Injectable()
 export class UserService {
   constructor(private readonly userMapper: UserMapper) {}

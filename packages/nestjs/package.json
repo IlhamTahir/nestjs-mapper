@@ -1,5 +1,5 @@
 {
-  "name": "@ilhamtahir/nest-mapper",
+  "name": "@ilhamtahir/nestjs-mapper",
   "version": "1.0.1",
   "description": "NestJS integration for @ilhamtahir/ts-mapper - A MapStruct-like object mapping library for TypeScript",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
     "build": "tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "pnpm build",
-    "postpublish": "echo \"✅ @ilhamtahir/nest-mapper published successfully!\""
+    "postpublish": "echo \"✅ @ilhamtahir/nestjs-mapper published successfully!\""
   },
   "files": [
     "dist",
@@ -17,13 +17,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ilhamtahir/nest-mapper.git",
+    "url": "https://github.com/ilhamtahir/nestjs-mapper.git",
     "directory": "packages/nestjs"
   },
   "bugs": {
-    "url": "https://github.com/ilhamtahir/nest-mapper/issues"
+    "url": "https://github.com/ilhamtahir/nestjs-mapper/issues"
   },
-  "homepage": "https://github.com/ilhamtahir/nest-mapper#readme",
+  "homepage": "https://github.com/ilhamtahir/nestjs-mapper#readme",
   "keywords": [
     "nestjs",
     "mapper",

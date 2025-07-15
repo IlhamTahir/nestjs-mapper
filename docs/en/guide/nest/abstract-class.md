@@ -1,6 +1,6 @@
 # Abstract Class Support
 
-`@ilhamtahir/nest-mapper` provides powerful abstract class support, allowing you to define abstract Mapper classes where the system automatically implements empty method bodies while preserving custom method logic.
+`@ilhamtahir/nestjs-mapper` provides powerful abstract class support, allowing you to define abstract Mapper classes where the system automatically implements empty method bodies while preserving custom method logic.
 
 ## Basic Concept
 

@@ -219,4 +219,4 @@ export class UserMapper {
 
 - 学习 [@Mapping 装饰器](./mapping) 的高级用法
 - 了解如何实现 [自定义转换策略](./custom-strategy)
-- 探索 [NestJS 集成](../nest/getting-started) 中的自动映射功能
+- 探索 [NestJS 集成](../nestjs/getting-started) 中的自动映射功能

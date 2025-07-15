@@ -1,6 +1,6 @@
 # Mapper 依赖注入
 
-`@ilhamtahir/nest-mapper` 完全集成了 NestJS 的依赖注入系统，提供自动注册、作用域管理和循环依赖处理等企业级功能。
+`@ilhamtahir/nestjs-mapper` 完全集成了 NestJS 的依赖注入系统，提供自动注册、作用域管理和循环依赖处理等企业级功能。
 
 ## 自动注册机制
 
@@ -11,7 +11,7 @@
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -359,7 +359,7 @@ describe('UserService', () => {
 ```typescript
 // user.integration.spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserService } from './user.service';
 import { UserMapper } from './user.mapper';
 
@@ -448,4 +448,4 @@ export class CachedUserMapper {
 
 - 了解 [抽象类支持](./abstract-class) 的高级功能
 - 学习如何处理 [嵌套与循环依赖](./circular-deps)
-- 查看 [API 文档](../../api/nest-mapper) 了解完整接口
+- 查看 [API 文档](../../api/nestjs-mapper) 了解完整接口

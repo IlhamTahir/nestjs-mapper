@@ -37,7 +37,7 @@ export default defineConfig({
       { text: 'Changelog', link: '/en/changelog' },
       {
         text: 'GitHub',
-        link: 'https://github.com/ilhamtahir/nest-mapper',
+        link: 'https://github.com/ilhamtahir/nestjs-mapper',
         target: '_blank'
       }
     ],
@@ -54,14 +54,14 @@ export default defineConfig({
           ]
         }
       ],
-      '/en/guide/nest/': [
+      '/en/guide/nestjs/': [
         {
-          text: 'nest-mapper Integration',
+          text: 'nestjs-mapper Integration',
           items: [
-            { text: 'NestJS Getting Started', link: '/en/guide/nest/getting-started' },
-            { text: 'Mapper Injection', link: '/en/guide/nest/injection' },
-            { text: 'Abstract Class Support', link: '/en/guide/nest/abstract-class' },
-            { text: 'Nested & Circular Dependencies', link: '/en/guide/nest/circular-deps' }
+            { text: 'NestJS Getting Started', link: '/en/guide/nestjs/getting-started' },
+            { text: 'Mapper Injection', link: '/en/guide/nestjs/injection' },
+            { text: 'Abstract Class Support', link: '/en/guide/nestjs/abstract-class' },
+            { text: 'Nested & Circular Dependencies', link: '/en/guide/nestjs/circular-deps' }
           ]
         }
       ],
@@ -70,7 +70,7 @@ export default defineConfig({
           text: 'API Reference',
           items: [
             { text: 'ts-mapper API', link: '/en/api/ts-mapper' },
-            { text: 'nest-mapper API', link: '/en/api/nest-mapper' }
+            { text: 'nestjs-mapper API', link: '/en/api/nestjs-mapper' }
           ]
         }
       ],

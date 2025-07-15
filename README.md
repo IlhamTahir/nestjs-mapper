@@ -2,11 +2,11 @@
 
 English | [简体中文](README.zh-CN.md)
 
-[![npm version](https://img.shields.io/npm/v/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![npm downloads](https://img.shields.io/npm/dm/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![npm license](https://img.shields.io/npm/l/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nest-mapper/pulls)
-[![GitHub stars](https://img.shields.io/github/stars/ilhamtahir/nest-mapper.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ilhamtahir/nest-mapper/stargazers/)
+[![npm version](https://img.shields.io/npm/v/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![npm downloads](https://img.shields.io/npm/dm/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![npm license](https://img.shields.io/npm/l/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nestjs-mapper/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/ilhamtahir/nestjs-mapper.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ilhamtahir/nestjs-mapper/stargazers/)
 
 A lightweight MapStruct alternative for TypeScript + NestJS ecosystem, providing standardized DTO ↔ Entity mapping solutions.
 
@@ -23,11 +23,11 @@ A lightweight MapStruct alternative for TypeScript + NestJS ecosystem, providing
 
 ## 📦 Package Structure
 
-| Module             | Package Name              | Description                                                               |
-| ------------------ | ------------------------- | ------------------------------------------------------------------------- |
-| Core Mapping Logic | `@ilhamtahir/ts-mapper`   | Decorator registration, mapping execution, field extraction               |
-| NestJS Integration | `@ilhamtahir/nest-mapper` | Auto dependency injection, module registration, enhanced Mapper decorator |
-| Example Project    | `examples/nest-app`       | Real-world usage examples with DTO, Entity, and Mapper                    |
+| Module             | Package Name                | Description                                                               |
+| ------------------ | --------------------------- | ------------------------------------------------------------------------- |
+| Core Mapping Logic | `@ilhamtahir/ts-mapper`     | Decorator registration, mapping execution, field extraction               |
+| NestJS Integration | `@ilhamtahir/nestjs-mapper` | Auto dependency injection, module registration, enhanced Mapper decorator |
+| Example Project    | `examples/nestjs-app`       | Real-world usage examples with DTO, Entity, and Mapper                    |
 
 ## 🛠️ Installation
 
@@ -45,21 +45,21 @@ A lightweight MapStruct alternative for TypeScript + NestJS ecosystem, providing
 npm install @ilhamtahir/ts-mapper
 
 # Install NestJS integration package
-npm install @ilhamtahir/nest-mapper
+npm install @ilhamtahir/nestjs-mapper
 
 # Or using yarn
-yarn add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+yarn add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 
 # Or using pnpm
-pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 ### Package Information
 
-| Package                   | Size                                                                                | Dependencies                       |
-| ------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------- |
-| `@ilhamtahir/ts-mapper`   | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/ts-mapper)   | Zero dependencies                  |
-| `@ilhamtahir/nest-mapper` | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/nest-mapper) | Depends on `@ilhamtahir/ts-mapper` |
+| Package                     | Size                                                                                  | Dependencies                       |
+| --------------------------- | ------------------------------------------------------------------------------------- | ---------------------------------- |
+| `@ilhamtahir/ts-mapper`     | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/ts-mapper)     | Zero dependencies                  |
+| `@ilhamtahir/nestjs-mapper` | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/nestjs-mapper) | Depends on `@ilhamtahir/ts-mapper` |
 
 ## 📖 Quick Start
 
@@ -93,7 +93,7 @@ export class UserDto {
 
 ```typescript
 // user.mapper.ts
-import { Mapper, Mapping, transform } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping, transform } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export class UserMapper {
@@ -111,7 +111,7 @@ export class UserMapper {
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -163,7 +163,7 @@ Visit http://localhost:3000/api to view Swagger documentation.
 
 ```typescript
 // user-abstract.mapper.ts
-import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export abstract class UserAbstractMapper {
@@ -295,8 +295,8 @@ export class UserMapper {
 
 ```bash
 # Clone project
-git clone https://github.com/ilhamtahir/nest-mapper.git
-cd nest-mapper
+git clone https://github.com/ilhamtahir/nestjs-mapper.git
+cd nestjs-mapper
 
 # Install dependencies
 pnpm install
@@ -419,9 +419,9 @@ See [CHANGELOG.md](./CHANGELOG.md) for detailed release notes and version histor
 
 ### Community Resources
 
-- [Documentation Site](https://ilhamtahir.github.io/nest-mapper/) (Coming Soon)
+- [Documentation Site](https://ilhamtahir.github.io/nestjs-mapper/) (Coming Soon)
 - [Examples Repository](./examples/) - Real-world usage examples
-- [Wiki](https://github.com/ilhamtahir/nest-mapper/wiki) - Additional guides and tutorials
+- [Wiki](https://github.com/ilhamtahir/nestjs-mapper/wiki) - Additional guides and tutorials
 
 ## 🤝 Contributing
 
@@ -439,10 +439,10 @@ Issues and Pull Requests are welcome!
 
 If you encounter any issues:
 
-1. Check the [FAQ](https://github.com/ilhamtahir/nest-mapper/wiki/FAQ)
-2. Search [existing Issues](https://github.com/ilhamtahir/nest-mapper/issues)
-3. Create a [new Issue](https://github.com/ilhamtahir/nest-mapper/issues/new/choose)
-4. Visit [Discussions](https://github.com/ilhamtahir/nest-mapper/discussions)
+1. Check the [FAQ](https://github.com/ilhamtahir/nestjs-mapper/wiki/FAQ)
+2. Search [existing Issues](https://github.com/ilhamtahir/nestjs-mapper/issues)
+3. Create a [new Issue](https://github.com/ilhamtahir/nestjs-mapper/issues/new/choose)
+4. Visit [Discussions](https://github.com/ilhamtahir/nestjs-mapper/discussions)
 
 ## 📄 License
 

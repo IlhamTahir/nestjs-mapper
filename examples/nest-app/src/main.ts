@@ -8,7 +8,7 @@ async function bootstrap() {
   // 配置 Swagger
   const config = new DocumentBuilder()
     .setTitle('NestJS Mapper Example')
-    .setDescription('演示 @ilhamtahir/nest-mapper 的使用示例')
+    .setDescription('演示 @ilhamtahir/nestjs-mapper 的使用示例')
     .setVersion('0.1.0')
     .addTag('用户管理', '用户相关的 API 接口')
     .build();

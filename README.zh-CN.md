@@ -2,11 +2,11 @@
 
 [English](./README.md) | 简体中文
 
-[![npm 版本](https://img.shields.io/npm/v/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![npm 下载量](https://img.shields.io/npm/dm/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![npm 许可证](https://img.shields.io/npm/l/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
-[![欢迎 PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nest-mapper/pulls)
-[![GitHub stars](https://img.shields.io/github/stars/ilhamtahir/nest-mapper.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ilhamtahir/nest-mapper/stargazers/)
+[![npm 版本](https://img.shields.io/npm/v/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![npm 下载量](https://img.shields.io/npm/dm/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![npm 许可证](https://img.shields.io/npm/l/@ilhamtahir/nestjs-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper)
+[![欢迎 PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nestjs-mapper/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/ilhamtahir/nestjs-mapper.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ilhamtahir/nestjs-mapper/stargazers/)
 
 一个 TypeScript + NestJS 生态的轻量级 MapStruct 替代品，提供标准化的 DTO ↔ Entity 映射方案。
 
@@ -23,11 +23,11 @@
 
 ## 📦 模块结构
 
-| 模块            | 包名                      | 说明                                      |
-| --------------- | ------------------------- | ----------------------------------------- |
-| 映射核心逻辑    | `@ilhamtahir/ts-mapper`   | 装饰器注册、映射执行、字段提取等          |
-| NestJS 框架封装 | `@ilhamtahir/nest-mapper` | 自动依赖注入、模块注册、Mapper 装饰器增强 |
-| 示例项目        | `examples/nest-app`       | 使用真实 DTO、Entity、Mapper 展示用法     |
+| 模块            | 包名                        | 说明                                      |
+| --------------- | --------------------------- | ----------------------------------------- |
+| 映射核心逻辑    | `@ilhamtahir/ts-mapper`     | 装饰器注册、映射执行、字段提取等          |
+| NestJS 框架封装 | `@ilhamtahir/nestjs-mapper` | 自动依赖注入、模块注册、Mapper 装饰器增强 |
+| 示例项目        | `examples/nestjs-app`       | 使用真实 DTO、Entity、Mapper 展示用法     |
 
 ## 🛠️ 安装
 
@@ -45,21 +45,21 @@
 npm install @ilhamtahir/ts-mapper
 
 # 安装 NestJS 集成包
-npm install @ilhamtahir/nest-mapper
+npm install @ilhamtahir/nestjs-mapper
 
 # 或使用 yarn
-yarn add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+yarn add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 
 # 或使用 pnpm
-pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 ### 包信息
 
-| 包名                      | 大小                                                                                | 依赖关系                     |
-| ------------------------- | ----------------------------------------------------------------------------------- | ---------------------------- |
-| `@ilhamtahir/ts-mapper`   | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/ts-mapper)   | 零依赖                       |
-| `@ilhamtahir/nest-mapper` | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/nest-mapper) | 依赖 `@ilhamtahir/ts-mapper` |
+| 包名                        | 大小                                                                                  | 依赖关系                     |
+| --------------------------- | ------------------------------------------------------------------------------------- | ---------------------------- |
+| `@ilhamtahir/ts-mapper`     | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/ts-mapper)     | 零依赖                       |
+| `@ilhamtahir/nestjs-mapper` | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/nestjs-mapper) | 依赖 `@ilhamtahir/ts-mapper` |
 
 ## 📖 快速开始
 
@@ -93,7 +93,7 @@ export class UserDto {
 
 ```typescript
 // user.mapper.ts
-import { Mapper, Mapping, transform } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping, transform } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export class UserMapper {
@@ -111,7 +111,7 @@ export class UserMapper {
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -148,7 +148,7 @@ export class AppService {
 
 ```typescript
 // user-abstract.mapper.ts
-import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export abstract class UserAbstractMapper {
@@ -205,8 +205,8 @@ export class UserMixedMapper {
 
 ```bash
 # 克隆项目
-git clone https://github.com/ilhamtahir/nest-mapper.git
-cd nest-mapper
+git clone https://github.com/ilhamtahir/nestjs-mapper.git
+cd nestjs-mapper
 
 # 安装依赖
 pnpm install
@@ -377,9 +377,9 @@ export class UserService {
 
 ### 社区资源
 
-- [文档站点](https://ilhamtahir.github.io/nest-mapper/)（即将推出）
+- [文档站点](https://ilhamtahir.github.io/nestjs-mapper/)（即将推出）
 - [示例仓库](./examples/) - 真实世界的使用示例
-- [Wiki](https://github.com/ilhamtahir/nest-mapper/wiki) - 额外的指南和教程
+- [Wiki](https://github.com/ilhamtahir/nestjs-mapper/wiki) - 额外的指南和教程
 
 ## 🤝 贡献
 
@@ -397,9 +397,9 @@ export class UserService {
 
 如果遇到问题，请：
 
-1. 查看 [FAQ](https://github.com/ilhamtahir/nest-mapper/wiki/FAQ)
-2. 搜索 [现有 Issues](https://github.com/ilhamtahir/nest-mapper/issues)
-3. 创建 [新 Issue](https://github.com/ilhamtahir/nest-mapper/issues/new/choose)
+1. 查看 [FAQ](https://github.com/ilhamtahir/nestjs-mapper/wiki/FAQ)
+2. 搜索 [现有 Issues](https://github.com/ilhamtahir/nestjs-mapper/issues)
+3. 创建 [新 Issue](https://github.com/ilhamtahir/nestjs-mapper/issues/new/choose)
 
 ## 📄 许可证
 

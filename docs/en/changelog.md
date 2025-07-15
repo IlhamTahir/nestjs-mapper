@@ -32,7 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✨ Type safety: Complete TypeScript type support
 - ✨ Metadata storage: Manage mapping rules and Mapper registration
 
-#### @ilhamtahir/nest-mapper (NestJS Integration Package)
+#### @ilhamtahir/nestjs-mapper (NestJS Integration Package)
 - ✨ NestJS version of `@Mapper()` decorator: Automatically adds `@Injectable()` support
 - ✨ `MapperModule`: Provides auto-registration and dependency injection configuration
 - ✨ `MapperModule.forRoot()`: Globally register all Mappers

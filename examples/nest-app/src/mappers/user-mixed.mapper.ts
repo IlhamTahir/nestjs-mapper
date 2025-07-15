@@ -1,4 +1,4 @@
-import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping } from '@ilhamtahir/nestjs-mapper';
 import { UserEntity } from '../entities/user.entity';
 import { UserDto } from '../dto/user.dto';
 

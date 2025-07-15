@@ -12,10 +12,10 @@ module.exports = {
     { type: 'ci', section: '🔧 Continuous Integration' },
     { type: 'chore', section: '🔨 Chores' },
   ],
-  commitUrlFormat: 'https://github.com/ilhamtahir/nest-mapper/commit/{{hash}}',
+  commitUrlFormat: 'https://github.com/ilhamtahir/nestjs-mapper/commit/{{hash}}',
   compareUrlFormat:
-    'https://github.com/ilhamtahir/nest-mapper/compare/{{previousTag}}...{{currentTag}}',
-  issueUrlFormat: 'https://github.com/ilhamtahir/nest-mapper/issues/{{id}}',
+    'https://github.com/ilhamtahir/nestjs-mapper/compare/{{previousTag}}...{{currentTag}}',
+  issueUrlFormat: 'https://github.com/ilhamtahir/nestjs-mapper/issues/{{id}}',
   userUrlFormat: 'https://github.com/{{user}}',
   releaseCommitMessageFormat: 'chore(release): {{currentTag}}',
   issuePrefixes: ['#'],

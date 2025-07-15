@@ -14,7 +14,7 @@ hero:
       link: /zh/guide/core/getting-started
     - theme: alt
       text: NestJS 集成
-      link: /zh/guide/nest/getting-started
+      link: /zh/guide/nestjs/getting-started
     - theme: alt
       text: 查看 GitHub
       link: https://github.com/ilhamtahir/nest-mapper

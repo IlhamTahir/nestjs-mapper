@@ -84,4 +84,4 @@ pnpm run release:nestjs
 log_success "Release $NEW_VERSION completed successfully! 🎉"
 log_info "Check the packages at:"
 log_info "  - https://www.npmjs.com/package/@ilhamtahir/ts-mapper"
-log_info "  - https://www.npmjs.com/package/@ilhamtahir/nest-mapper"
+log_info "  - https://www.npmjs.com/package/@ilhamtahir/nestjs-mapper"

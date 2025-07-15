@@ -325,5 +325,5 @@ export class UserMapper {
 ## 下一步
 
 - 了解 [自定义转换策略](./custom-strategy) 实现复杂映射逻辑
-- 探索 [NestJS 集成](../nest/getting-started) 中的依赖注入功能
+- 探索 [NestJS 集成](../nestjs/getting-started) 中的依赖注入功能
 - 查看 [API 文档](../../api/ts-mapper) 了解完整的接口定义

@@ -7,12 +7,12 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### ✨ Features
 
-* **core:** implement ts-mapper and nest-mapper with abstract class + proxy support ([cef69dc](https://github.com/ilhamtahir/nest-mapper/commit/cef69dc95e16b5a1513529dc3d847afff4764276))
-* **doc:** add docs project ([1c2d1f6](https://github.com/ilhamtahir/nest-mapper/commit/1c2d1f61b5b3131115595f5b36eadd77905d310c))
-* **doc:** add docs project ([f8484b6](https://github.com/ilhamtahir/nest-mapper/commit/f8484b6b34a78a8a03fd2d95173a781ed7f10aed))
-* finish nest-mapper ([df7ad01](https://github.com/ilhamtahir/nest-mapper/commit/df7ad014e05d74037805ab34649df3db50a5c275))
-* finish nest-mapper ([9a1b0be](https://github.com/ilhamtahir/nest-mapper/commit/9a1b0bef048df12e3ce7a6a6fe21b8b131ec7266))
-* init project ([a30cbb7](https://github.com/ilhamtahir/nest-mapper/commit/a30cbb7f2556efb143a02d39bd08192aa73c457c))
+* **core:** implement ts-mapper and nestjs-mapper with abstract class + proxy support ([cef69dc](https://github.com/ilhamtahir/nestjs-mapper/commit/cef69dc95e16b5a1513529dc3d847afff4764276))
+* **doc:** add docs project ([1c2d1f6](https://github.com/ilhamtahir/nestjs-mapper/commit/1c2d1f61b5b3131115595f5b36eadd77905d310c))
+* **doc:** add docs project ([f8484b6](https://github.com/ilhamtahir/nestjs-mapper/commit/f8484b6b34a78a8a03fd2d95173a781ed7f10aed))
+* finish nestjs-mapper ([df7ad01](https://github.com/ilhamtahir/nestjs-mapper/commit/df7ad014e05d74037805ab34649df3db50a5c275))
+* finish nestjs-mapper ([9a1b0be](https://github.com/ilhamtahir/nestjs-mapper/commit/9a1b0bef048df12e3ce7a6a6fe21b8b131ec7266))
+* init project ([a30cbb7](https://github.com/ilhamtahir/nestjs-mapper/commit/a30cbb7f2556efb143a02d39bd08192aa73c457c))
 
 ## [1.0.0] - 2025-07-15
 
@@ -36,7 +36,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### 📦 Packages
 
 - `@ilhamtahir/ts-mapper`: Core mapping library
-- `@ilhamtahir/nest-mapper`: NestJS integration package
+- `@ilhamtahir/nestjs-mapper`: NestJS integration package
 
 ### 🔧 Development Tools
 

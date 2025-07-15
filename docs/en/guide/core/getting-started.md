@@ -209,4 +209,4 @@ export class UserMapper {
 - Learn about [transform() function](./transform) detailed usage
 - Explore [@Mapping decorator](./mapping) advanced configuration
 - Discover [custom transformation strategies](./custom-strategy)
-- If you're using NestJS, check out [NestJS integration guide](../nest/getting-started)
+- If you're using NestJS, check out [NestJS integration guide](../nestjs/getting-started)

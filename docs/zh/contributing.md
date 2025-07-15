@@ -13,8 +13,8 @@
 ### 克隆项目
 
 ```bash
-git clone https://github.com/ilhamtahir/nest-mapper.git
-cd nest-mapper
+git clone https://github.com/ilhamtahir/nestjs-mapper.git
+cd nestjs-mapper
 ```
 
 ### 安装依赖
@@ -26,18 +26,18 @@ pnpm install
 ### 项目结构
 
 ```
-nest-mapper/
+nestjs-mapper/
 ├── packages/
 │   ├── core/                 # @ilhamtahir/ts-mapper 核心包
 │   │   ├── src/
 │   │   ├── package.json
 │   │   └── tsconfig.json
-│   └── nestjs/               # @ilhamtahir/nest-mapper NestJS 集成包
+│   └── nestjs/               # @ilhamtahir/nestjs-mapper NestJS 集成包
 │       ├── src/
 │       ├── package.json
 │       └── tsconfig.json
 ├── examples/
-│   └── nest-app/             # 示例应用
+│   └── nestjs-app/             # 示例应用
 ├── docs/                     # 文档源码
 │   ├── .vitepress/
 │   ├── guide/
@@ -103,7 +103,7 @@ pnpm docs:preview
 
 ### 🐛 Bug 报告
 
-发现 bug？请通过 [GitHub Issues](https://github.com/ilhamtahir/nest-mapper/issues) 报告：
+发现 bug？请通过 [GitHub Issues](https://github.com/ilhamtahir/nestjs-mapper/issues) 报告：
 
 1. 使用清晰的标题描述问题
 2. 提供详细的重现步骤
@@ -172,8 +172,8 @@ pnpm docs:preview
 
    ```bash
    # 在 GitHub 上 fork 项目
-   git clone https://github.com/YOUR_USERNAME/nest-mapper.git
-   cd nest-mapper
+   git clone https://github.com/YOUR_USERNAME/nestjs-mapper.git
+   cd nestjs-mapper
    ```
 
 2. **创建功能分支**
@@ -267,7 +267,7 @@ pnpm test
 
 # 运行特定包的测试
 pnpm --filter @ilhamtahir/ts-mapper test
-pnpm --filter @ilhamtahir/nest-mapper test
+pnpm --filter @ilhamtahir/nestjs-mapper test
 
 # 运行测试并生成覆盖率报告
 pnpm test:coverage
@@ -382,8 +382,8 @@ git push origin main --tags
 
 如果您在贡献过程中遇到问题：
 
-1. 查看现有的 [Issues](https://github.com/ilhamtahir/nest-mapper/issues)
-2. 搜索 [Discussions](https://github.com/ilhamtahir/nest-mapper/discussions)
+1. 查看现有的 [Issues](https://github.com/ilhamtahir/nestjs-mapper/issues)
+2. 搜索 [Discussions](https://github.com/ilhamtahir/nestjs-mapper/discussions)
 3. 创建新的 Issue 或 Discussion
 4. 在 PR 中 @mention 维护者
 

@@ -1,6 +1,6 @@
 # NestJS 快速开始
 
-`@ilhamtahir/nest-mapper` 是基于 `@ilhamtahir/ts-mapper` 的 NestJS 集成包，提供依赖注入、自动注册和抽象类支持等企业级功能。
+`@ilhamtahir/nestjs-mapper` 是基于 `@ilhamtahir/ts-mapper` 的 NestJS 集成包，提供依赖注入、自动注册和抽象类支持等企业级功能。
 
 ## 安装
 
@@ -8,15 +8,15 @@
 
 ```bash [npm]
 # 同时安装核心包和 NestJS 集成包
-npm install @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+npm install @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 ```bash [yarn]
-yarn add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+yarn add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 ```bash [pnpm]
-pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 :::
@@ -30,7 +30,7 @@ pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -47,7 +47,7 @@ export class AppModule {}
 
 ```typescript
 // user.mapper.ts
-import { Mapper, Mapping, transform } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping, transform } from '@ilhamtahir/nestjs-mapper';
 import { UserEntity } from './user.entity';
 import { UserDto } from './user.dto';
 
@@ -144,7 +144,7 @@ import { UserMapper } from './user.mapper';
 const userMapper = new UserMapper();
 const dto = userMapper.toDto(entity);
 
-// ✅ nest-mapper：自动依赖注入
+// ✅ nestjs-mapper：自动依赖注入
 @Injectable()
 export class UserService {
   constructor(private readonly userMapper: UserMapper) {}
@@ -165,7 +165,7 @@ const mappers = {
   order: new OrderMapper(),
 };
 
-// ✅ nest-mapper：自动注册和管理
+// ✅ nestjs-mapper：自动注册和管理
 @Module({
   imports: [MapperModule.forRoot()], // 自动发现并注册所有 @Mapper()
 })
@@ -238,7 +238,7 @@ export class UserMapper {
 
 // user.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
 
@@ -297,7 +297,7 @@ export class UserMapper {
 ```typescript
 // user.mapper.spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './user.mapper';
 
 describe('UserMapper', () => {
@@ -347,4 +347,4 @@ export class UserService {
 - 了解 [Mapper 依赖注入](./injection) 的高级用法
 - 探索 [抽象类支持](./abstract-class) 功能
 - 学习如何处理 [嵌套与循环依赖](./circular-deps)
-- 查看 [API 文档](../../api/nest-mapper) 了解完整接口
+- 查看 [API 文档](../../api/nestjs-mapper) 了解完整接口

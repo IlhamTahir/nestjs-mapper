@@ -1,6 +1,6 @@
 # Nested & Circular Dependencies
 
-In complex business scenarios, you often encounter nested relationships and circular dependencies between objects. This chapter explains how to elegantly handle these situations in `@ilhamtahir/nest-mapper`.
+In complex business scenarios, you often encounter nested relationships and circular dependencies between objects. This chapter explains how to elegantly handle these situations in `@ilhamtahir/nestjs-mapper`.
 
 ## Nested Object Mapping
 

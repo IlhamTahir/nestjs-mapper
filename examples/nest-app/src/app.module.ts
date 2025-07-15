@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 

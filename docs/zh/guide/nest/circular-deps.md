@@ -1,6 +1,6 @@
 # 嵌套与循环依赖处理
 
-在复杂的业务场景中，经常会遇到对象间的嵌套关系和循环依赖。本章介绍如何在 `@ilhamtahir/nest-mapper` 中优雅地处理这些情况。
+在复杂的业务场景中，经常会遇到对象间的嵌套关系和循环依赖。本章介绍如何在 `@ilhamtahir/nestjs-mapper` 中优雅地处理这些情况。
 
 ## 嵌套对象映射
 
@@ -525,6 +525,6 @@ describe('Circular Dependency Handling', () => {
 
 ## 下一步
 
-- 查看 [API 文档](../../api/nest-mapper) 了解完整接口
+- 查看 [API 文档](../../api/nestjs-mapper) 了解完整接口
 - 探索 [核心功能](../core/getting-started) 的高级用法
 - 了解 [依赖注入](./injection) 的最佳实践

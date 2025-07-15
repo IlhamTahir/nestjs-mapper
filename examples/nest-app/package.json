@@ -1,7 +1,7 @@
 {
-  "name": "nest-app-example",
+  "name": "nestjs-app-example",
   "version": "0.1.0",
-  "description": "Example NestJS application demonstrating @ilhamtahir/nest-mapper usage",
+  "description": "Example NestJS application demonstrating @ilhamtahir/nestjs-mapper usage",
   "private": true,
   "scripts": {
     "build": "nest build",
@@ -18,7 +18,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@ilhamtahir/nest-mapper": "workspace:*",
+    "@ilhamtahir/nestjs-mapper": "workspace:*",
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",

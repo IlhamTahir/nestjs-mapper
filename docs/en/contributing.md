@@ -13,8 +13,8 @@ Thank you for your interest in the ts-mapper project! We welcome all forms of co
 ### Clone the Project
 
 ```bash
-git clone https://github.com/ilhamtahir/nest-mapper.git
-cd nest-mapper
+git clone https://github.com/ilhamtahir/nestjs-mapper.git
+cd nestjs-mapper
 ```
 
 ### Install Dependencies
@@ -26,13 +26,13 @@ pnpm install
 ### Project Structure
 
 ```
-nest-mapper/
+nestjs-mapper/
 ├── packages/
 │   ├── core/                 # @ilhamtahir/ts-mapper core package
 │   │   ├── src/
 │   │   ├── package.json
 │   │   └── tsconfig.json
-│   └── nestjs/               # @ilhamtahir/nest-mapper NestJS integration package
+│   └── nestjs/               # @ilhamtahir/nestjs-mapper NestJS integration package
 │       ├── src/
 │       ├── package.json
 │       └── tsconfig.json

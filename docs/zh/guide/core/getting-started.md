@@ -209,4 +209,4 @@ export class UserMapper {
 - 了解 [transform() 函数](./transform) 的详细用法
 - 学习 [@Mapping 装饰器](./mapping) 的高级配置
 - 探索 [自定义转换策略](./custom-strategy)
-- 如果你使用 NestJS，查看 [NestJS 集成指南](../nest/getting-started)
+- 如果你使用 NestJS，查看 [NestJS 集成指南](../nestjs/getting-started)

@@ -1,6 +1,6 @@
 # 抽象类支持
 
-`@ilhamtahir/nest-mapper` 提供了强大的抽象类支持，允许你定义抽象 Mapper 类，系统会自动实现空方法体，同时保留自定义方法的逻辑。
+`@ilhamtahir/nestjs-mapper` 提供了强大的抽象类支持，允许你定义抽象 Mapper 类，系统会自动实现空方法体，同时保留自定义方法的逻辑。
 
 ## 基本概念
 
@@ -30,7 +30,7 @@ export abstract class UserMapper {
 
 ```typescript
 // user.mapper.ts
-import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping } from '@ilhamtahir/nestjs-mapper';
 import { UserEntity } from '../entities/user.entity';
 import { UserDto } from '../dto/user.dto';
 
@@ -368,7 +368,7 @@ export abstract class TypeSafeMapper {
 ```typescript
 // user.mapper.spec.ts
 import { Test, TestingModule } from '@nestjs/testing';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './user.mapper';
 
 describe('UserMapper', () => {
@@ -427,5 +427,5 @@ describe('UserMapper', () => {
 ## 下一步
 
 - 学习如何处理 [嵌套与循环依赖](./circular-deps)
-- 查看 [API 文档](../../api/nest-mapper) 了解完整接口
+- 查看 [API 文档](../../api/nestjs-mapper) 了解完整接口
 - 探索 [核心功能](../core/getting-started) 的高级用法

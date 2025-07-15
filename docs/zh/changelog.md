@@ -32,7 +32,7 @@
 - ✨ 类型安全：完整的 TypeScript 类型支持
 - ✨ 元数据存储：管理映射规则和 Mapper 注册
 
-#### @ilhamtahir/nest-mapper (NestJS 集成包)
+#### @ilhamtahir/nestjs-mapper (NestJS 集成包)
 - ✨ NestJS 版本的 `@Mapper()` 装饰器：自动添加 `@Injectable()` 支持
 - ✨ `MapperModule`：提供自动注册和依赖注入配置
 - ✨ `MapperModule.forRoot()`：全局注册所有 Mapper
@@ -101,7 +101,7 @@
 
 #### 包大小
 - `@ilhamtahir/ts-mapper`: ~15KB (gzipped)
-- `@ilhamtahir/nest-mapper`: ~5KB (gzipped)
+- `@ilhamtahir/nestjs-mapper`: ~5KB (gzipped)
 
 ### 性能特性
 - **元数据缓存**：映射规则在首次使用时缓存
@@ -146,13 +146,13 @@
 如果您遇到问题或有功能请求，请：
 
 1. 查看 [文档](https://docs.ilham.dev/ts-mapper)
-2. 搜索现有的 [Issues](https://github.com/ilhamtahir/nest-mapper/issues)
+2. 搜索现有的 [Issues](https://github.com/ilhamtahir/nestjs-mapper/issues)
 3. 创建新的 Issue 或 Discussion
 4. 参与社区讨论
 
 ## 许可证
 
-本项目基于 [MIT 许可证](https://github.com/ilhamtahir/nest-mapper/blob/main/LICENSE) 开源。
+本项目基于 [MIT 许可证](https://github.com/ilhamtahir/nestjs-mapper/blob/main/LICENSE) 开源。
 
 ---
 

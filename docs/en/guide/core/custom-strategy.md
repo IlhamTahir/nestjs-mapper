@@ -127,6 +127,6 @@ export class UserMapper {
 
 ## Next Steps
 
-- Explore [NestJS integration](../nest/getting-started) dependency injection features
-- Learn about [abstract class support](../nest/abstract-class) advanced usage
+- Explore [NestJS integration](../nestjs/getting-started) dependency injection features
+- Learn about [abstract class support](../nestjs/abstract-class) advanced usage
 - Check [API documentation](../../api/ts-mapper) for complete interface definitions

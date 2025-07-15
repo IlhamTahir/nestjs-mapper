@@ -219,4 +219,4 @@ export class UserMapper {
 
 - Learn advanced usage of [@Mapping decorator](./mapping)
 - Understand how to implement [custom transformation strategies](./custom-strategy)
-- Explore [NestJS integration](../nest/getting-started) auto-mapping features
+- Explore [NestJS integration](../nestjs/getting-started) auto-mapping features

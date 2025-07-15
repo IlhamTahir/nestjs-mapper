@@ -1,6 +1,6 @@
 # Mapper Dependency Injection
 
-`@ilhamtahir/nest-mapper` fully integrates with NestJS's dependency injection system, providing automatic registration, scope management, and circular dependency handling for enterprise-grade applications.
+`@ilhamtahir/nestjs-mapper` fully integrates with NestJS's dependency injection system, providing automatic registration, scope management, and circular dependency handling for enterprise-grade applications.
 
 ## Automatic Registration Mechanism
 
@@ -11,7 +11,7 @@ Use the `forRoot()` method to automatically discover and register all classes us
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -223,4 +223,4 @@ describe('UserService', () => {
 
 - Learn about [abstract class support](./abstract-class) advanced features
 - Learn how to handle [nested & circular dependencies](./circular-deps)
-- Check [API documentation](../../api/nest-mapper) for complete interfaces
+- Check [API documentation](../../api/nestjs-mapper) for complete interfaces

@@ -14,10 +14,10 @@ hero:
       link: /en/guide/core/getting-started
     - theme: alt
       text: NestJS Integration
-      link: /en/guide/nest/getting-started
+      link: /en/guide/nestjs/getting-started
     - theme: alt
       text: View on GitHub
-      link: https://github.com/ilhamtahir/nest-mapper
+      link: https://github.com/ilhamtahir/nestjs-mapper
 
 features:
   - icon: 🛡️
@@ -57,10 +57,10 @@ class UserMapper {
 }
 ```
 
-### NestJS Integration (@ilhamtahir/nest-mapper)
+### NestJS Integration (@ilhamtahir/nestjs-mapper)
 
 ```typescript
-import { Mapper, Mapping } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export abstract class UserMapper {
@@ -81,7 +81,7 @@ export abstract class UserMapper {
 
 ```typescript
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [
@@ -100,7 +100,7 @@ export class AppModule {}
 npm install @ilhamtahir/ts-mapper
 
 # NestJS integration package
-npm install @ilhamtahir/nest-mapper
+npm install @ilhamtahir/nestjs-mapper
 ```
 
 ```bash [yarn]
@@ -108,7 +108,7 @@ npm install @ilhamtahir/nest-mapper
 yarn add @ilhamtahir/ts-mapper
 
 # NestJS integration package
-yarn add @ilhamtahir/nest-mapper
+yarn add @ilhamtahir/nestjs-mapper
 ```
 
 ```bash [pnpm]
@@ -116,7 +116,7 @@ yarn add @ilhamtahir/nest-mapper
 pnpm add @ilhamtahir/ts-mapper
 
 # NestJS integration package
-pnpm add @ilhamtahir/nest-mapper
+pnpm add @ilhamtahir/nestjs-mapper
 ```
 
 :::
@@ -132,7 +132,7 @@ pnpm add @ilhamtahir/nest-mapper
 
 ## Community & Support
 
-- [GitHub Issues](https://github.com/ilhamtahir/nest-mapper/issues) - Report issues and feature requests
-- [GitHub Discussions](https://github.com/ilhamtahir/nest-mapper/discussions) - Community discussions
+- [GitHub Issues](https://github.com/ilhamtahir/nestjs-mapper/issues) - Report issues and feature requests
+- [GitHub Discussions](https://github.com/ilhamtahir/nestjs-mapper/discussions) - Community discussions
 - [NPM Package](https://www.npmjs.com/package/@ilhamtahir/ts-mapper) - View package information
-- [Example Projects](https://github.com/ilhamtahir/nest-mapper/tree/main/examples) - Complete usage examples
+- [Example Projects](https://github.com/ilhamtahir/nestjs-mapper/tree/main/examples) - Complete usage examples

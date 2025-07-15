@@ -1,6 +1,6 @@
 # Release Guide
 
-This document describes how to release `@ilhamtahir/ts-mapper` and `@ilhamtahir/nest-mapper` packages.
+This document describes how to release `@ilhamtahir/ts-mapper` and `@ilhamtahir/nestjs-mapper` packages.
 
 ## 🚀 Quick Release
 
@@ -130,7 +130,7 @@ npm login
 Packages will be published to:
 
 - `@ilhamtahir/ts-mapper` - Core mapping library
-- `@ilhamtahir/nest-mapper` - NestJS integration
+- `@ilhamtahir/nestjs-mapper` - NestJS integration
 
 ### Publishing Permissions
 
@@ -177,7 +177,7 @@ If you need to roll back a release:
 ```bash
 # Unpublish from npm (within 24 hours)
 npm unpublish @ilhamtahir/ts-mapper@<version>
-npm unpublish @ilhamtahir/nest-mapper@<version>
+npm unpublish @ilhamtahir/nestjs-mapper@<version>
 
 # Delete git tag
 git tag -d v<version>

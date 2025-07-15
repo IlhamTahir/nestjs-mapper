@@ -362,6 +362,6 @@ export class UserMapper {
 
 ## 下一步
 
-- 探索 [NestJS 集成](../nest/getting-started) 中的依赖注入功能
-- 了解 [抽象类支持](../nest/abstract-class) 的高级用法
+- 探索 [NestJS 集成](../nestjs/getting-started) 中的依赖注入功能
+- 了解 [抽象类支持](../nestjs/abstract-class) 的高级用法
 - 查看 [API 文档](../../api/ts-mapper) 了解完整的接口定义
