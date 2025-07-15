@@ -1,6 +1,6 @@
 # NestJS Mapper
 
-English | [简体中文](./README-ZH.md)
+English | [简体中文](README.zh-CN.md)
 
 A lightweight MapStruct alternative for TypeScript + NestJS ecosystem, providing standardized DTO ↔ Entity mapping solutions.
 
