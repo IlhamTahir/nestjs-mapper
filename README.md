@@ -2,6 +2,12 @@
 
 English | [简体中文](README.zh-CN.md)
 
+[![npm version](https://img.shields.io/npm/v/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
+[![npm downloads](https://img.shields.io/npm/dm/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
+[![npm license](https://img.shields.io/npm/l/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nest-mapper/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/ilhamtahir/nest-mapper.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ilhamtahir/nest-mapper/stargazers/)
+
 A lightweight MapStruct alternative for TypeScript + NestJS ecosystem, providing standardized DTO ↔ Entity mapping solutions.
 
 ## 🚀 Features
@@ -25,13 +31,35 @@ A lightweight MapStruct alternative for TypeScript + NestJS ecosystem, providing
 
 ## 🛠️ Installation
 
+### Requirements
+
+- **Node.js**: >= 16.0.0
+- **TypeScript**: >= 4.7.0
+- **NestJS**: >= 10.0.0
+- **reflect-metadata**: >= 0.1.12
+
+### Package Installation
+
 ```bash
 # Install core package
 npm install @ilhamtahir/ts-mapper
 
 # Install NestJS integration package
 npm install @ilhamtahir/nest-mapper
+
+# Or using yarn
+yarn add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+
+# Or using pnpm
+pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
 ```
+
+### Package Information
+
+| Package                   | Size                                                                                | Dependencies                       |
+| ------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------- |
+| `@ilhamtahir/ts-mapper`   | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/ts-mapper)   | Zero dependencies                  |
+| `@ilhamtahir/nest-mapper` | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/nest-mapper) | Depends on `@ilhamtahir/ts-mapper` |
 
 ## 📖 Quick Start
 
@@ -207,6 +235,60 @@ export class UserMixedMapper {
 - `transform(mapper, method, input, OutputType)`: Execute mapping transformation
 - `createMapperProxy(MapperClass)`: Create proxy object supporting auto-mapping
 
+### Advanced Usage Examples
+
+#### Complex Nested Mapping
+
+```typescript
+@Mapper()
+export class OrderMapper {
+  @Mapping({ source: 'customer.profile.firstName', target: 'customerName' })
+  @Mapping({ source: 'customer.profile.email', target: 'customerEmail' })
+  @Mapping({ source: 'items', target: 'orderItems' })
+  toDto(entity: OrderEntity): OrderDto {
+    return transform(this, 'toDto', entity, OrderDto);
+  }
+}
+```
+
+#### Array and Collection Mapping
+
+```typescript
+@Mapper()
+export class ProductMapper {
+  toDto(entity: ProductEntity): ProductDto {
+    return transform(this, 'toDto', entity, ProductDto);
+  }
+
+  toDtoList(entities: ProductEntity[]): ProductDto[] {
+    return entities.map(entity => this.toDto(entity));
+  }
+
+  // Bidirectional mapping
+  toEntity(dto: ProductDto): ProductEntity {
+    return transform(this, 'toEntity', dto, ProductEntity);
+  }
+}
+```
+
+#### Custom Transformation Logic
+
+```typescript
+@Mapper()
+export class UserMapper {
+  @Mapping({ source: 'fullName', target: 'displayName' })
+  toDto(entity: UserEntity): UserDto {
+    const dto = transform(this, 'toDto', entity, UserDto);
+
+    // Custom post-processing
+    dto.displayName = dto.displayName?.toUpperCase();
+    dto.createdAt = new Date(entity.createdAt).toISOString();
+
+    return dto;
+  }
+}
+```
+
 ## 🚀 Development and Release
 
 ### Development Setup
@@ -271,6 +353,75 @@ refactor: refactor code
 test: add tests
 chore: build tools or dependency updates
 ```
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+#### TypeScript Compilation Errors
+
+```bash
+# Make sure you have the correct TypeScript version
+npm install typescript@^4.7.0 --save-dev
+
+# Enable experimental decorators in tsconfig.json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
+```
+
+#### Mapper Not Found in DI Container
+
+```typescript
+// Make sure to import MapperModule in your app module
+@Module({
+  imports: [
+    MapperModule.forRoot(), // This is required!
+  ],
+})
+export class AppModule {}
+```
+
+#### Circular Dependency Issues
+
+```typescript
+// Use forwardRef for circular dependencies
+@Injectable()
+export class UserService {
+  constructor(
+    @Inject(forwardRef(() => UserMapper))
+    private readonly userMapper: UserMapper
+  ) {}
+}
+```
+
+### Performance Tips
+
+- Use abstract classes with empty method bodies for better performance
+- Avoid complex transformations in mapping methods
+- Consider caching for frequently used mappings
+- Use batch operations for large datasets
+
+## 📋 Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for detailed release notes and version history.
+
+## 🌟 Ecosystem
+
+### Related Projects
+
+- [MapStruct](https://mapstruct.org/) - Java mapping framework (inspiration)
+- [AutoMapper](https://automapper.org/) - .NET object mapping library
+- [class-transformer](https://github.com/typestack/class-transformer) - TypeScript transformation library
+
+### Community Resources
+
+- [Documentation Site](https://ilhamtahir.github.io/nest-mapper/) (Coming Soon)
+- [Examples Repository](./examples/) - Real-world usage examples
+- [Wiki](https://github.com/ilhamtahir/nest-mapper/wiki) - Additional guides and tutorials
 
 ## 🤝 Contributing
 

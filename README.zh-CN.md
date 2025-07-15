@@ -2,6 +2,12 @@
 
 [English](./README.md) | 简体中文
 
+[![npm 版本](https://img.shields.io/npm/v/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
+[![npm 下载量](https://img.shields.io/npm/dm/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
+[![npm 许可证](https://img.shields.io/npm/l/@ilhamtahir/nest-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/nest-mapper)
+[![欢迎 PR](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nest-mapper/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/ilhamtahir/nest-mapper.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ilhamtahir/nest-mapper/stargazers/)
+
 一个 TypeScript + NestJS 生态的轻量级 MapStruct 替代品，提供标准化的 DTO ↔ Entity 映射方案。
 
 ## 🚀 特性
@@ -25,13 +31,35 @@
 
 ## 🛠️ 安装
 
+### 环境要求
+
+- **Node.js**: >= 16.0.0
+- **TypeScript**: >= 4.7.0
+- **NestJS**: >= 10.0.0
+- **reflect-metadata**: >= 0.1.12
+
+### 包安装
+
 ```bash
 # 安装核心包
 npm install @ilhamtahir/ts-mapper
 
 # 安装 NestJS 集成包
 npm install @ilhamtahir/nest-mapper
+
+# 或使用 yarn
+yarn add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+
+# 或使用 pnpm
+pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
 ```
+
+### 包信息
+
+| 包名                      | 大小                                                                                | 依赖关系                     |
+| ------------------------- | ----------------------------------------------------------------------------------- | ---------------------------- |
+| `@ilhamtahir/ts-mapper`   | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/ts-mapper)   | 零依赖                       |
+| `@ilhamtahir/nest-mapper` | ![npm bundle size](https://img.shields.io/bundlephobia/min/@ilhamtahir/nest-mapper) | 依赖 `@ilhamtahir/ts-mapper` |
 
 ## 📖 快速开始
 
@@ -218,9 +246,152 @@ pnpm run test-release patch
 ./scripts/release.sh major   # 主要版本
 ```
 
+## 📚 API 文档
+
+### 装饰器
+
+- `@Mapper()`：标记类为映射器，自动注册到 NestJS 容器
+- `@Mapping({ source, target })`：显式字段映射定义
+
+### 工具函数
+
+- `transform(mapper, method, input, OutputType)`：执行映射转换
+- `createMapperProxy(MapperClass)`：创建支持自动映射的代理对象
+
+### 高级使用示例
+
+#### 复杂嵌套映射
+
+```typescript
+@Mapper()
+export class OrderMapper {
+  @Mapping({ source: 'customer.profile.firstName', target: 'customerName' })
+  @Mapping({ source: 'customer.profile.email', target: 'customerEmail' })
+  @Mapping({ source: 'items', target: 'orderItems' })
+  toDto(entity: OrderEntity): OrderDto {
+    return transform(this, 'toDto', entity, OrderDto);
+  }
+}
+```
+
+#### 数组和集合映射
+
+```typescript
+@Mapper()
+export class ProductMapper {
+  toDto(entity: ProductEntity): ProductDto {
+    return transform(this, 'toDto', entity, ProductDto);
+  }
+
+  toDtoList(entities: ProductEntity[]): ProductDto[] {
+    return entities.map(entity => this.toDto(entity));
+  }
+
+  // 双向映射
+  toEntity(dto: ProductDto): ProductEntity {
+    return transform(this, 'toEntity', dto, ProductEntity);
+  }
+}
+```
+
+#### 自定义转换逻辑
+
+```typescript
+@Mapper()
+export class UserMapper {
+  @Mapping({ source: 'fullName', target: 'displayName' })
+  toDto(entity: UserEntity): UserDto {
+    const dto = transform(this, 'toDto', entity, UserDto);
+
+    // 自定义后处理
+    dto.displayName = dto.displayName?.toUpperCase();
+    dto.createdAt = new Date(entity.createdAt).toISOString();
+
+    return dto;
+  }
+}
+```
+
+## 🔧 故障排除
+
+### 常见问题
+
+#### TypeScript 编译错误
+
+```bash
+# 确保您有正确的 TypeScript 版本
+npm install typescript@^4.7.0 --save-dev
+
+# 在 tsconfig.json 中启用实验性装饰器
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
+```
+
+#### 在 DI 容器中找不到 Mapper
+
+```typescript
+// 确保在应用模块中导入 MapperModule
+@Module({
+  imports: [
+    MapperModule.forRoot(), // 这是必需的！
+  ],
+})
+export class AppModule {}
+```
+
+#### 循环依赖问题
+
+```typescript
+// 对循环依赖使用 forwardRef
+@Injectable()
+export class UserService {
+  constructor(
+    @Inject(forwardRef(() => UserMapper))
+    private readonly userMapper: UserMapper
+  ) {}
+}
+```
+
+### 性能提示
+
+- 使用带有空方法体的抽象类以获得更好的性能
+- 避免在映射方法中进行复杂的转换
+- 考虑为频繁使用的映射进行缓存
+- 对大型数据集使用批量操作
+
+## 📋 更新日志
+
+详细的发布说明和版本历史请查看 [CHANGELOG.md](./CHANGELOG.md)。
+
+## 🌟 生态系统
+
+### 相关项目
+
+- [MapStruct](https://mapstruct.org/) - Java 映射框架（灵感来源）
+- [AutoMapper](https://automapper.org/) - .NET 对象映射库
+- [class-transformer](https://github.com/typestack/class-transformer) - TypeScript 转换库
+
+### 社区资源
+
+- [文档站点](https://ilhamtahir.github.io/nest-mapper/)（即将推出）
+- [示例仓库](./examples/) - 真实世界的使用示例
+- [Wiki](https://github.com/ilhamtahir/nest-mapper/wiki) - 额外的指南和教程
+
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request！
+
+### 贡献流程
+
+1. Fork 项目
+2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'feat: add amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 创建 Pull Request
 
 ## 📞 支持
 
