@@ -45,12 +45,12 @@ Thank you for your interest in contributing to NestJS Mapper! This document prov
 ## 📁 Project Structure
 
 ```
-nest-mapper/
+nestjs-mapper/
 ├── packages/
 │   ├── core/                 # @ilhamtahir/ts-mapper
-│   └── nestjs/              # @ilhamtahir/nest-mapper
+│   └── nestjs/              # @ilhamtahir/nestjs-mapper
 ├── examples/
-│   └── nest-app/            # Example application
+│   └── nestjs-app/          # Example application
 ├── docs/                    # Documentation
 ├── scripts/                 # Build and release scripts
 └── tests/                   # Integration tests

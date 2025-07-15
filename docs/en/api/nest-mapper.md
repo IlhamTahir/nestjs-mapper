@@ -1,10 +1,10 @@
 # nestjs-mapper API Documentation
 
-`@ilhamtahir/nest-mapper` is a NestJS integration package built on top of `@ilhamtahir/ts-mapper`, providing dependency injection and modular support.
+`@ilhamtahir/nestjs-mapper` is a NestJS integration package built on top of `@ilhamtahir/ts-mapper`, providing dependency injection and modular support.
 
 ## Re-exports
 
-nest-mapper re-exports all core functionality from ts-mapper:
+nestjs-mapper re-exports all core functionality from ts-mapper:
 
 ```typescript
 // Re-exported from @ilhamtahir/ts-mapper
@@ -31,7 +31,7 @@ function Mapper(): ClassDecorator;
 **Example:**
 
 ```typescript
-import { Mapper, Mapping, transform } from '@ilhamtahir/nest-mapper';
+import { Mapper, Mapping, transform } from '@ilhamtahir/nestjs-mapper';
 
 @Mapper()
 export class UserMapper {
@@ -90,7 +90,7 @@ static forFeature(mappers: Array<new (...args: any[]) => any>): DynamicModule
 ```typescript
 // user.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 import { UserMapper } from './user.mapper';
 import { ProfileMapper } from './profile.mapper';
 

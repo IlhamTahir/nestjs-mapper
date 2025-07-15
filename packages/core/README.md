@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/@ilhamtahir/ts-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/ts-mapper)
 [![npm downloads](https://img.shields.io/npm/dm/@ilhamtahir/ts-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/ts-mapper)
 [![npm license](https://img.shields.io/npm/l/@ilhamtahir/ts-mapper.svg)](https://www.npmjs.com/package/@ilhamtahir/ts-mapper)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nest-mapper/pulls)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ilhamtahir/nestjs-mapper/pulls)
 
 Core package for TypeScript object mapping with decorator support. Part of the NestJS Mapper ecosystem.
 

@@ -347,4 +347,4 @@ export class UserService {
 - Learn about [Mapper dependency injection](./injection) advanced usage
 - Explore [abstract class support](./abstract-class) features
 - Learn how to handle [nested & circular dependencies](./circular-deps)
-- Check [API documentation](../../api/nest-mapper) for complete interfaces
+- Check [API documentation](../../api/nestjs-mapper) for complete interfaces

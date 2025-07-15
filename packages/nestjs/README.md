@@ -11,13 +11,13 @@ NestJS integration for @ilhamtahir/ts-mapper - A MapStruct-like object mapping l
 
 ```bash
 # Install both packages
-npm install @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+npm install @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 
 # Or using yarn
-yarn add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+yarn add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 
 # Or using pnpm
-pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
+pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nestjs-mapper
 ```
 
 ## 🚀 Features
@@ -35,7 +35,7 @@ pnpm add @ilhamtahir/ts-mapper @ilhamtahir/nest-mapper
 ```typescript
 // app.module.ts
 import { Module } from '@nestjs/common';
-import { MapperModule } from '@ilhamtahir/nest-mapper';
+import { MapperModule } from '@ilhamtahir/nestjs-mapper';
 
 @Module({
   imports: [

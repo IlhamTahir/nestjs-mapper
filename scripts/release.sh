@@ -5,6 +5,12 @@
 
 set -e
 
+# 确保使用 bash
+if [ -z "$BASH_VERSION" ]; then
+    echo "This script requires bash"
+    exit 1
+fi
+
 # 颜色定义
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -31,34 +37,40 @@ log_error() {
 
 # 检查参数
 RELEASE_TYPE=${1:-"patch"}
-if [[ ! "$RELEASE_TYPE" =~ ^(patch|minor|major)$ ]]; then
+if [ "$RELEASE_TYPE" != "patch" ] && [ "$RELEASE_TYPE" != "minor" ] && [ "$RELEASE_TYPE" != "major" ]; then
     log_error "Invalid release type. Use: patch, minor, or major"
     exit 1
 fi
 
 log_info "Starting release process for: $RELEASE_TYPE"
 
-# 检查工作目录是否干净
-if [[ -n $(git status --porcelain) ]]; then
-    log_error "Working directory is not clean. Please commit or stash your changes."
-    exit 1
-fi
-
-# 检查是否在主分支
-CURRENT_BRANCH=$(git branch --show-current)
-if [[ "$CURRENT_BRANCH" != "main" && "$CURRENT_BRANCH" != "master" ]]; then
-    log_warning "You are not on the main branch. Current branch: $CURRENT_BRANCH"
-    read -p "Continue anyway? (y/N): " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        log_info "Release cancelled."
-        exit 0
+# 在 CI 环境中跳过交互式检查
+if [ "$CI" != "true" ]; then
+    # 检查工作目录是否干净
+    if [ -n "$(git status --porcelain)" ]; then
+        log_error "Working directory is not clean. Please commit or stash your changes."
+        exit 1
     fi
-fi
 
-# 拉取最新代码
-log_info "Pulling latest changes..."
-git pull origin $CURRENT_BRANCH
+    # 检查是否在主分支
+    CURRENT_BRANCH=$(git branch --show-current)
+    if [ "$CURRENT_BRANCH" != "main" ] && [ "$CURRENT_BRANCH" != "master" ]; then
+        log_warning "You are not on the main branch. Current branch: $CURRENT_BRANCH"
+        read -p "Continue anyway? (y/N): " -n 1 -r
+        echo
+        if [ "$REPLY" != "y" ] && [ "$REPLY" != "Y" ]; then
+            log_info "Release cancelled."
+            exit 0
+        fi
+    fi
+
+    # 拉取最新代码
+    log_info "Pulling latest changes..."
+    git pull origin $CURRENT_BRANCH
+else
+    log_info "Running in CI environment, skipping interactive checks..."
+    CURRENT_BRANCH=$(git branch --show-current)
+fi
 
 # 运行预发布检查
 log_info "Running pre-release checks..."

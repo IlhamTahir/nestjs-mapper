@@ -4,6 +4,9 @@ export default defineConfig({
   title: 'ts-mapper',
   description: 'Type-safe object mapping library for TypeScript and NestJS',
 
+  // GitHub Pages 部署配置
+  base: process.env.NODE_ENV === 'production' ? '/nestjs-mapper/' : '/',
+
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#3c82f6' }],
@@ -54,14 +57,14 @@ export default defineConfig({
           ]
         }
       ],
-      '/en/guide/nestjs/': [
+      '/en/guide/nest/': [
         {
           text: 'nestjs-mapper Integration',
           items: [
-            { text: 'NestJS Getting Started', link: '/en/guide/nestjs/getting-started' },
-            { text: 'Mapper Injection', link: '/en/guide/nestjs/injection' },
-            { text: 'Abstract Class Support', link: '/en/guide/nestjs/abstract-class' },
-            { text: 'Nested & Circular Dependencies', link: '/en/guide/nestjs/circular-deps' }
+            { text: 'NestJS Getting Started', link: '/en/guide/nest/getting-started' },
+            { text: 'Mapper Injection', link: '/en/guide/nest/injection' },
+            { text: 'Abstract Class Support', link: '/en/guide/nest/abstract-class' },
+            { text: 'Nested & Circular Dependencies', link: '/en/guide/nest/circular-deps' }
           ]
         }
       ],
@@ -87,7 +90,7 @@ export default defineConfig({
       ],
       '/zh/guide/nest/': [
         {
-          text: 'nest-mapper 集成',
+          text: 'nestjs-mapper 集成',
           items: [
             { text: 'NestJS 快速开始', link: '/zh/guide/nest/getting-started' },
             { text: 'Mapper 依赖注入', link: '/zh/guide/nest/injection' },
@@ -101,14 +104,14 @@ export default defineConfig({
           text: 'API 参考',
           items: [
             { text: 'ts-mapper API', link: '/zh/api/ts-mapper' },
-            { text: 'nest-mapper API', link: '/zh/api/nest-mapper' }
+            { text: 'nestjs-mapper API', link: '/zh/api/nestjs-mapper' }
           ]
         }
       ]
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ilhamtahir/nest-mapper' },
+      { icon: 'github', link: 'https://github.com/ilhamtahir/nestjs-mapper' },
       { icon: 'npm', link: 'https://www.npmjs.com/package/@ilhamtahir/ts-mapper' }
     ],
 
@@ -118,7 +121,7 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/ilhamtahir/nest-mapper/edit/main/docs/:path',
+      pattern: 'https://github.com/ilhamtahir/nestjs-mapper/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
 

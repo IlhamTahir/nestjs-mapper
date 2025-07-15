@@ -37,7 +37,7 @@ nestjs-mapper/
 │       ├── package.json
 │       └── tsconfig.json
 ├── examples/
-│   └── nest-app/             # Example application
+│   └── nestjs-app/           # Example application
 ├── docs/                     # Documentation source code
 │   ├── .vitepress/
 │   ├── en/                   # English documentation
@@ -267,7 +267,7 @@ pnpm test
 
 # Run tests for specific package
 pnpm --filter @ilhamtahir/ts-mapper test
-pnpm --filter @ilhamtahir/nest-mapper test
+pnpm --filter @ilhamtahir/nestjs-mapper test
 
 # Run tests and generate coverage report
 pnpm test:coverage
