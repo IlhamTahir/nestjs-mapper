@@ -4,7 +4,7 @@
   "description": "A MapStruct-like object mapping library for TypeScript and NestJS",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm -r build",
+    "build": "pnpm build:core && pnpm build:nestjs",
     "build:core": "pnpm --filter @ilhamtahir/ts-mapper build",
     "build:nestjs": "pnpm --filter @ilhamtahir/nest-mapper build",
     "build:example": "pnpm --filter nest-app-example build",
@@ -17,7 +17,7 @@
     "lint:check": "eslint . --ext .ts,.js",
     "format": "prettier --write \"**/*.{ts,js,json,md}\"",
     "format:check": "prettier --check \"**/*.{ts,js,json,md}\"",
-    "type-check": "pnpm -r exec tsc --noEmit",
+    "type-check": "pnpm build:core && pnpm --filter @ilhamtahir/ts-mapper exec tsc --noEmit && pnpm --filter @ilhamtahir/nest-mapper exec tsc --noEmit",
     "pre-release": "run-s lint:check format:check type-check build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "version:patch": "standard-version --release-as patch",
