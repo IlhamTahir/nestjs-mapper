@@ -1,12 +1,20 @@
 {
   "name": "nest-mapper",
   "version": "1.0.0",
-  "description": "",
+  "description": "A MapStruct-like object mapping library for TypeScript and NestJS",
   "main": "index.js",
   "scripts": {
+    "build": "pnpm -r build",
+    "build:core": "pnpm --filter @ilhamtahir/ts-mapper build",
+    "build:nestjs": "pnpm --filter @ilhamtahir/nest-mapper build",
+    "build:example": "pnpm --filter nest-app-example build",
+    "dev:example": "pnpm --filter nest-app-example start:dev",
+    "start:example": "pnpm --filter nest-app-example start",
+    "install:all": "pnpm install",
+    "clean": "pnpm -r exec rm -rf dist node_modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["typescript", "nestjs", "mapper", "dto", "entity", "mapstruct", "object-mapping"],
   "author": "IlhamTahir",
   "license": "MIT",
   "packageManager": "pnpm@10.7.1"
