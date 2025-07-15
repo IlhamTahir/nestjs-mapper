@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/ilhamtahir/nestjs-mapper/compare/v1.0.1...v1.0.2) (2025-07-15)
+
+
+### 🐛 Bug Fixes
+
+* **ci:** add unit test ([fd67a5c](https://github.com/ilhamtahir/nestjs-mapper/commit/fd67a5cacfd07c203cc84d019ab944f0fcd3f650))
+* **ci:** change ts config ([a97948a](https://github.com/ilhamtahir/nestjs-mapper/commit/a97948ac38ebe003ced686afa7e29e8e6e4771dc))
+* **ci:** modify ci publish ([47b2a46](https://github.com/ilhamtahir/nestjs-mapper/commit/47b2a4636a246bfb479ed956c15c3a136fc79512))
+
+
+### ♻️ Code Refactoring
+
+* rename package name ([00b440a](https://github.com/ilhamtahir/nestjs-mapper/commit/00b440a9be685bccc41baa2bbd40bc1375cd621a))
+
 ### 1.0.1 (2025-07-15)
 
 
