@@ -1,6 +1,6 @@
 {
   "name": "nestjs-mapper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A MapStruct-like object mapping library for TypeScript and NestJS",
   "main": "index.js",
   "scripts": {
