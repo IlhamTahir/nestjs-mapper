@@ -1,6 +1,6 @@
 {
   "name": "@ilhamtahir/nest-mapper",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "NestJS integration for @ilhamtahir/ts-mapper - A MapStruct-like object mapping library for TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
